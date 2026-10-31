@@ -51,7 +51,7 @@
     .logo span { color: var(--orange); }
     .logo-pc { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.75); margin-left: 0.6rem; letter-spacing: 0; white-space: nowrap; }
     @media (max-width: 420px) { .logo-pc { display: block; margin-left: 0; font-size: 0.72rem; line-height: 1.2; } }
-    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav { display: flex; gap: 1.3rem; align-items: center; }
     nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
     nav a:hover { color: var(--orange); }
 
@@ -239,13 +239,13 @@
     .lang a:hover { color: var(--orange); }
     .lang a.on { color: #fff; background: rgba(255,255,255,0.14); }
     nav { margin-left: auto; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1320px) {
       .lang { margin-left: auto; margin-right: 0.5rem; order: 2; }
       .menu-toggle { order: 3; }
     }
     @media (max-width: 420px) { .lang a { padding: 0.25rem 0.3rem; font-size: 0.7rem; } }
     .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1320px) {
       nav { display: none; }
       .menu-toggle { display: block; }
       nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 1.25rem 1.5rem; gap: 1rem; }
@@ -280,6 +280,7 @@
     <a href="#" class="logo">Inductorstraat <span>41</span><small class="logo-pc">3903 KA Veenendaal</small></a>
     <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
     <nav>
+      <a href="#">Accueil</a>
       <a href="#object">L’objet</a>
       <a href="#video">Vidéo</a>
       <a href="#galerij">Photos</a>
