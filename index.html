@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inductorstraat 41 Veenendaal | Bedrijfsobject te huur</title>
+  <meta name="description" content="Omvangrijk bedrijfsobject te huur aan de Inductorstraat 41 in Veenendaal. 5.380 m² bedrijfsruimte + 1.390 m² kantoor. Uitstekende bereikbaarheid A12/A15." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a365d;
+      --navy-dark: #0f2744;
+      --orange: #f6ad55;
+      --orange-dark: #dd9a3f;
+      --gray: #4a5568;
+      --light: #f7fafc;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      color: var(--navy);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(26, 54, 93, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--orange); }
+
+    nav { display: flex; gap: 1.75rem; align-items: center; }
+    nav a {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--orange); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--orange);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+    }
+    .btn-outline:hover { background: var(--orange); color: var(--navy); }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/foto_01.jpg') center/cover no-repeat;
+      transform: scale(1.05);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15,39,68,0.88) 0%, rgba(26,54,93,0.7) 50%, rgba(15,39,68,0.85) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 7rem 1.5rem 4rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.03em;
+    }
+    .hero h1 span { color: var(--orange); }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      font-weight: 500;
+      opacity: 0.95;
+      margin-bottom: 1.75rem;
+      max-width: 560px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      margin-bottom: 2.25rem;
+    }
+    .hero-stat strong {
+      display: block;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--orange);
+    }
+    .hero-stat span {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* Sections */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Kenmerken */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .feature-card {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(26,54,93,0.1);
+    }
+    .feature-card .icon {
+      width: 48px; height: 48px;
+      background: var(--navy);
+      color: var(--orange);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .feature-card p { color: var(--gray); font-size: 0.95rem; }
+
+    /* Video section */
+    .video-section {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+    .video-section h2 { color: var(--white); }
+    .video-section .lead { color: rgba(255,255,255,0.75); }
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+      background: #000;
+      aspect-ratio: 16/9;
+    }
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    /* Specs table */
+    .specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .specs { grid-template-columns: 1fr; }
+    }
+    .spec-block h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--orange);
+      display: inline-block;
+    }
+    .spec-list {
+      list-style: none;
+    }
+    .spec-list li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+    .spec-list li span:last-child {
+      font-weight: 600;
+      color: var(--navy);
+      text-align: right;
+    }
+
+    /* Location */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .location-grid { grid-template-columns: 1fr; }
+    }
+    .location-points {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    .location-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-bottom: 1.1rem;
+      font-size: 1.02rem;
+    }
+    .location-points .check {
+      background: var(--orange);
+      color: var(--navy);
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+      font-size: 0.85rem;
+    }
+    .location-img {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(26,54,93,0.15);
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+    .cta-section h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-section p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+    .phone-big {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+    .cta-section .btn {
+      font-size: 1.05rem;
+      padding: 0.95rem 2rem;
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer strong { color: var(--white); }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-height: 90vh;
+      max-width: 95vw;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.25rem; right: 1.5rem;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Mobile nav */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: var(--navy);
+        padding: 1.25rem;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Inductorstraat <span>41</span></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#kenmerken">Kenmerken</a>
+      <a href="#video">Video</a>
+      <a href="#galerij">Galerij</a>
+      <a href="#specificaties">Specificaties</a>
+      <a href="#locatie">Locatie</a>
+      <a href="#contact" class="btn" style="padding: 0.55rem 1.1rem; font-size: 0.85rem;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="badge">TE HUUR</div>
+      <h1>Inductorstraat 41<br><span>Veenendaal</span></h1>
+      <p class="hero-sub">Omvangrijk bedrijfsobject op bedrijventerrein Nijverkamp. Direct beschikbaar.</p>
+      
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>5.380 m²</strong>
+          <span>Bedrijfsruimte</span>
+        </div>
+        <div class="hero-stat">
+          <strong>1.390 m²</strong>
+          <span>Kantoorruimte</span>
+        </div>
+        <div class="hero-stat">
+          <strong>10×</strong>
+          <span>Schuifdeuren 6m</span>
+        </div>
+        <div class="hero-stat">
+          <strong>183 kW</strong>
+          <span>Elektra</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Plan een rondleiding</a>
+        <a href="#video" class="btn btn-outline">Bekijk de video</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenmerken -->
+  <section id="kenmerken">
+    <div class="container">
+      <div class="section-label">Het object</div>
+      <h2>Ruim, flexibel en goed bereikbaar</h2>
+      <p class="lead">Een veelzijdig bedrijfsobject dat geschikt is voor uiteenlopende activiteiten: van zware industrie en productie tot opslag en logistiek.</p>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">🏭</div>
+          <h3>Royale bedrijfsruimte</h3>
+          <p>Ca. 5.380 m² met betonvloer, lichtstraten, krachtstroom en tien hoge schuifdeuren.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🏢</div>
+          <h3>Representatieve kantoren</h3>
+          <p>1.390 m² kantoorruimte over begane grond en eerste verdieping, met veel daglicht en airco.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Sterke aansluitingen</h3>
+          <p>183 kW elektra en 45 m³/h gas. Technische ruimte met compressoren aanwezig.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🚛</div>
+          <h3>Uitstekende logistiek</h3>
+          <p>Direct aan de Rondweg-Oost, snelle verbinding met A12 en A15. Ideaal voor distributie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="video-section">
+    <div class="container">
+      <div class="section-label" style="color: var(--orange);">Impressie</div>
+      <h2>Bekijk het object</h2>
+      <p class="lead">Korte promotievideo met voice-over. Krijg direct een goed beeld van de ruimtes en de locatie.</p>
+
+      <div class="video-wrapper">
+        <video controls playsinline poster="images/post1_teaser.jpg">
+          <source src="video/promo.mp4" type="video/mp4" />
+          Uw browser ondersteunt geen video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerij -->
+  <section id="galerij">
+    <div class="container">
+      <div class="section-label">Foto’s</div>
+      <h2>Een kijkje binnen en buiten</h2>
+      <p class="lead">Selectie van de belangrijkste beelden van het object.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_01.jpg" alt="Luchtfoto Inductorstraat 41" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_03.jpg" alt="Overzicht bedrijventerrein" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_05.jpg" alt="Bedrijfsruimte interieur" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_07.jpg" alt="Productiehal" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_10.jpg" alt="Buitenzijde met overheaddeuren" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_15.jpg" alt="Kantoorruimte" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_20.jpg" alt="Kantoor interieur" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_25.jpg" alt="Kantine / pantry" loading="lazy" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/foto_02.jpg" alt="Straatbeeld" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specificaties -->
+  <section id="specificaties" style="background: var(--light);">
+    <div class="container">
+      <div class="section-label">Details</div>
+      <h2>Specificaties & voorzieningen</h2>
+      <p class="lead">Het object wordt opgeleverd in de huidige staat.</p>
+
+      <div class="specs">
+        <div class="spec-block">
+          <h3>Bedrijfsruimte</h3>
+          <ul class="spec-list">
+            <li><span>Oppervlakte</span><span>ca. 5.380 m²</span></li>
+            <li><span>Schuifdeuren</span><span>10 stuks, ca. 6 m hoog</span></li>
+            <li><span>Vloer</span><span>Betonvloer</span></li>
+            <li><span>Verlichting</span><span>Lichtstraten</span></li>
+            <li><span>Elektra</span><span>183 kW gecontracteerd</span></li>
+            <li><span>Gas</span><span>45 m³/h</span></li>
+            <li><span>Kraanbaan</span><span>Mogelijk in overleg</span></li>
+            <li><span>Overig</span><span>Kleedruimte, sanitair, kantine</span></li>
+          </ul>
+        </div>
+        <div class="spec-block">
+          <h3>Kantoorruimte</h3>
+          <ul class="spec-list">
+            <li><span>Oppervlakte</span><span>ca. 1.390 m²</span></li>
+            <li><span>Verdiepingen</span><span>Begane grond + 1e etage</span></li>
+            <li><span>Afwerking</span><span>Systeemplafond, LED</span></li>
+            <li><span>Klimaat</span><span>Airconditioning + radiatoren</span></li>
+            <li><span>Ramen</span><span>Te openen, veel daglicht</span></li>
+            <li><span>Voorzieningen</span><span>Pantry, sanitair</span></li>
+            <li><span>Indeling</span><span>Kamerindeling aanwezig</span></li>
+            <li><span>Entree</span><span>Representatief</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locatie -->
+  <section id="locatie">
+    <div class="container">
+      <div class="location-grid">
+        <div>
+          <div class="section-label">Ligging</div>
+          <h2>Strategisch gelegen in Veenendaal</h2>
+          <p class="lead" style="margin-bottom: 0;">Bedrijventerrein Nijverkamp / Het Ambacht, direct aan de Rondweg-Oost.</p>
+          
+          <ul class="location-points">
+            <li>
+              <span class="check">✓</span>
+              <span>Snelle verbinding met de A12 en A15</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Goede bereikbaarheid met openbaar vervoer</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Nabij NS-station Veenendaal-De Klomp</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span>Centrale ligging in de Foodvalley / Midden-Nederland</span>
+            </li>
+          </ul>
+        </div>
+        <div class="location-img">
+          <img src="images/foto_03.jpg" alt="Luchtfoto locatie Nijverkamp" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <div class="section-label" style="color: var(--orange);">Contact</div>
+      <h2>Interesse in dit object?</h2>
+      <p>Plan een vrijblijvende rondleiding en ervaar zelf of dit de juiste plek is voor uw bedrijf.</p>
+      
+      <div class="phone-big">06-33042600</div>
+      <p style="margin-bottom: 0.25rem; opacity: 0.8;">Eric</p>
+      
+      <a href="tel:+31633042600" class="btn">Bel direct</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Inductorstraat 41, Veenendaal</strong> · Bedrijfsobject te huur · <a href="tel:+31633042600" style="color: var(--orange);">06-33042600</a></p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">© 2026 · Alle rechten voorbehouden</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Sluiten">×</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('nav')?.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
