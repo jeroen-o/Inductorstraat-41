@@ -47,6 +47,8 @@
     }
     .logo { font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: -0.02em; }
     .logo span { color: var(--orange); }
+    .logo-pc { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.75); margin-left: 0.6rem; letter-spacing: 0; white-space: nowrap; }
+    @media (max-width: 420px) { .logo-pc { display: block; margin-left: 0; font-size: 0.72rem; line-height: 1.2; } }
     nav { display: flex; gap: 1.5rem; align-items: center; }
     nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     nav a:hover { color: var(--orange); }
@@ -212,6 +214,9 @@
     /* Footer */
     footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.08); }
     footer strong { color: var(--white); }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 1.1rem 0 0.4rem; }
+    .btn-li { background: #0a66c2; border-color: #0a66c2; color: #fff; }
+    .btn-li:hover { background: #004182; border-color: #004182; }
     footer .disclaimer { max-width: 760px; margin: 0.9rem auto 0; font-size: 0.75rem; opacity: 0.7; }
 
     /* Lightbox */
@@ -259,7 +264,7 @@
 <body>
 
   <header>
-    <a href="#" class="logo">Inductorstraat <span>41</span></a>
+    <a href="#" class="logo">Inductorstraat <span>41</span><small class="logo-pc">3903 KA Veenendaal</small></a>
     <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
     <nav>
       <a href="#object">Het object</a>
@@ -281,7 +286,7 @@
         <span class="badge badge-ghost">Budget voor aanpassingen</span>
         <span class="badge badge-ghost">Milieucategorie 4.2</span>
       </div>
-      <h1>Inductorstraat 41<br><span>Veenendaal</span></h1>
+      <h1>Inductorstraat 41<br><span>3903 KA Veenendaal</span></h1>
       <p class="hero-sub">Zelfstandig bedrijfsobject van ca. 6.770 m² op bedrijventerrein Het Ambacht / Nijverkamp, direct aan de Rondweg-Oost.</p>
       <p class="hero-price">Huurprijs <strong>€ 440.000</strong> per jaar, excl. btw</p>
 
@@ -564,7 +569,10 @@
   </section>
 
   <footer>
-    <p><strong>Inductorstraat 41, Veenendaal</strong> · Bedrijfsobject te huur · <a href="tel:+31633042600" style="color: var(--orange);">06-33042600</a></p>
+    <p><strong>Inductorstraat 41, 3903 KA Veenendaal</strong> · Bedrijfsobject te huur · <a href="tel:+31633042600" style="color: var(--orange);">06-33042600</a></p>
+    <div class="footer-links">
+      <a href="linkedin.html" class="btn btn-li">in&nbsp; LinkedIn promotie</a>
+    </div>
     <p class="disclaimer">De vermelde informatie behelst geen aanbod, maar globale informatie van algemene aard en is niet meer dan een uitnodiging om in onderhandeling te treden. Aan de inhoud kunnen geen rechten worden ontleend. Metrages en tekeningen zijn indicatief.</p>
     <p style="margin-top: 0.5rem; font-size: 0.78rem;">© 2026 · Alle rechten voorbehouden</p>
   </footer>
