@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inductorstraat 41 Veenendaal | Bâtiment d’activité à louer</title>
+  <meta name="description" content="Bâtiment d’activité indépendant à louer, Inductorstraat 41 à Veenendaal (Pays-Bas)&nbsp;: env. 5&nbsp;380 m² de locaux d’activité + 1&nbsp;390 m² de bureaux, catégorie environnementale 4.2, budget disponible pour des aménagements. Directement sur la Rondweg-Oost (A12/A15)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="À louer&nbsp;: Inductorstraat 41, Veenendaal – bâtiment d’activité de 6&nbsp;770 m²" />
+  <meta property="og:description" content="Env. 5&nbsp;380 m² de locaux d’activité + 1&nbsp;390 m² de bureaux sur la zone d’activités Het Ambacht/Nijverkamp. Catégorie environnementale 4.2. Budget disponible pour des aménagements." />
+  <meta property="og:image" content="https://jeroen-o.github.io/Inductorstraat-41/images/post1_teaser.jpg" />
+  <meta property="og:url" content="https://jeroen-o.github.io/Inductorstraat-41/fr/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" hreflang="nl" href="https://jeroen-o.github.io/Inductorstraat-41/index.html" />
+  <link rel="alternate" hreflang="en" href="https://jeroen-o.github.io/Inductorstraat-41/en/index.html" />
+  <link rel="alternate" hreflang="de" href="https://jeroen-o.github.io/Inductorstraat-41/de/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://jeroen-o.github.io/Inductorstraat-41/fr/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://jeroen-o.github.io/Inductorstraat-41/index.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1f2933; --navy-dark: #111827; --orange: #b8813a; --orange-dark: #9a6a2c; --on-accent: #ffffff;
+      --gray: #4a5568;
+      --light: #f5f5f4;
+      --line: #e2e8f0;
+      --white: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-padding-top: 70px; }
+    body {
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      color: var(--navy);
+      line-height: 1.6;
+      background: var(--white);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(17, 24, 39, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 0.9rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: -0.02em; white-space: nowrap; }
+    .logo span { color: var(--orange); }
+    .logo-pc { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.75); margin-left: 0.6rem; letter-spacing: 0; white-space: nowrap; }
+    @media (max-width: 420px) { .logo-pc { display: block; margin-left: 0; font-size: 0.72rem; line-height: 1.2; } }
+    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    nav a:hover { color: var(--orange); }
+
+    .ico { flex-shrink: 0; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--orange); color: var(--on-accent);
+      font-weight: 700; font-size: 0.9rem;
+      padding: 0.7rem 1.4rem; border-radius: 6px;
+      transition: all 0.2s; border: 2px solid var(--orange); cursor: pointer;
+      font-family: inherit;
+    }
+    .btn:hover { background: var(--orange-dark); border-color: var(--orange-dark); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--orange); }
+    .btn-outline:hover { background: var(--orange); color: var(--on-accent); }
+    .btn-navy { background: var(--navy); border-color: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
+
+    /* Hero */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; color: var(--white); overflow: hidden; padding: 0; }
+    .hero-bg { position: absolute; inset: 0; background: url('../images/foto_01.jpg') center/cover no-repeat; transform: scale(1.05); }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(17,24,39,0.9) 0%, rgba(31,41,51,0.72) 50%, rgba(17,24,39,0.88) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 1100px; width: 100%; margin: 0 auto; padding: 7rem 1.5rem 4rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; }
+    .badge {
+      display: inline-block; background: var(--orange); color: var(--on-accent);
+      font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em;
+      padding: 0.4rem 1rem; border-radius: 4px;
+    }
+    .badge-ghost { background: rgba(255,255,255,0.12); color: var(--white); border: 1px solid rgba(255,255,255,0.35); }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.03em; }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub { font-size: 1.2rem; font-weight: 500; opacity: 0.95; margin-bottom: 0.6rem; max-width: 620px; }
+    .hero-price { font-size: 1.05rem; margin-bottom: 1.75rem; opacity: 0.95; }
+    .hero-price strong { color: var(--orange); font-size: 1.3rem; }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; margin-bottom: 2.25rem; }
+    .hero-stat strong { display: block; font-size: 1.75rem; font-weight: 800; color: var(--orange); line-height: 1.2; }
+    .hero-stat span { font-size: 0.88rem; opacity: 0.85; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* Budget banner */
+    .budget-banner { background: var(--orange); color: var(--on-accent); padding: 1.6rem 1.5rem; }
+    .budget-banner .container { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; justify-content: space-between; }
+    .budget-banner .bb-text { display: flex; gap: 1rem; align-items: center; flex: 1 1 480px; }
+    .budget-banner .bb-icon { flex-shrink: 0; display: flex; }
+    .budget-banner h3 { font-size: 1.2rem; font-weight: 800; line-height: 1.25; }
+    .budget-banner p { font-size: 0.95rem; font-weight: 500; }
+
+    /* Sections */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; color: var(--orange-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--navy); line-height: 1.2; }
+    .lead { font-size: 1.08rem; color: var(--gray); max-width: 680px; margin-bottom: 2.5rem; }
+    .bg-light { background: var(--light); }
+
+    /* Intro */
+    .intro-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: start; }
+    .intro-grid p { color: var(--gray); margin-bottom: 1rem; }
+    .intro-img { border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(31,41,51,0.15); }
+    @media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* Kenmerken */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .feature-card { background: var(--light); border-radius: 12px; padding: 1.75rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(31,41,51,0.1); }
+    .feature-card .icon {
+      width: 48px; height: 48px; background: var(--navy); color: var(--orange);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1rem;
+    }
+    .feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { color: var(--gray); font-size: 0.93rem; }
+    .feature-card.highlight { background: var(--navy); color: var(--white); }
+    .feature-card.highlight .icon { background: var(--orange); color: var(--on-accent); }
+    .feature-card.highlight p { color: rgba(255,255,255,0.8); }
+
+    /* Video */
+    .video-section { background: var(--navy-dark); color: var(--white); }
+    .video-section h2 { color: var(--white); }
+    .video-section .lead { color: rgba(255,255,255,0.75); }
+    .video-section .section-label { color: var(--orange); }
+    .video-wrapper { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.35); background: #000; aspect-ratio: 16/9; }
+    .video-wrapper video { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Gallery */
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .filter {
+      background: var(--light); border: 1px solid var(--line); color: var(--navy);
+      font-family: inherit; font-weight: 600; font-size: 0.85rem;
+      padding: 0.45rem 1rem; border-radius: 999px; cursor: pointer; transition: all 0.2s;
+    }
+    .filter:hover { border-color: var(--navy); }
+    .filter.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.85rem; }
+    .gallery-item { border-radius: 10px; overflow: hidden; aspect-ratio: 3/2; cursor: zoom-in; position: relative; background: var(--line); border: 0; padding: 0; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item.hidden { display: none; }
+
+    /* Specs */
+    .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; }
+    @media (max-width: 768px) { .specs { grid-template-columns: 1fr; } }
+    .spec-block h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--orange); display: inline-block; }
+    .spec-list { list-style: none; }
+    .spec-list li { padding: 0.62rem 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; font-size: 0.94rem; }
+    .spec-list li span:first-child { color: var(--gray); }
+    .spec-list li span:last-child { font-weight: 600; color: var(--navy); text-align: right; }
+    .note { font-size: 0.82rem; color: var(--gray); margin-top: 1.5rem; font-style: italic; }
+
+    /* Plattegrond */
+    .plan-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 2.5rem; align-items: center; }
+    @media (max-width: 860px) { .plan-grid { grid-template-columns: 1fr; } }
+    .plan-img { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; cursor: zoom-in; }
+    .dims { list-style: none; }
+    .dims li { display: flex; gap: 0.9rem; align-items: baseline; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+    .dims strong { font-size: 1.4rem; font-weight: 800; color: var(--navy); min-width: 7.5rem; }
+    .dims span { color: var(--gray); font-size: 0.93rem; }
+
+    /* Huurcondities */
+    .cond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .cond { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem 1.5rem; }
+    .cond h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange-dark); margin-bottom: 0.4rem; }
+    .cond p { font-size: 0.93rem; color: var(--gray); }
+    .cond p strong { color: var(--navy); }
+    .cond.price { background: var(--navy); border-color: var(--navy); }
+    .cond.price h4 { color: var(--orange); }
+    .cond.price p { color: rgba(255,255,255,0.8); }
+    .cond.price .amount { display: block; font-size: 1.8rem; font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 0.25rem; }
+    .cond.budget { background: #faf5ee; border-color: var(--orange); }
+
+    /* Locatie */
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+    @media (max-width: 860px) { .location-grid { grid-template-columns: 1fr; } }
+    .location-points { list-style: none; margin: 1.5rem 0; }
+    .location-points li { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1rem; font-size: 1rem; }
+    .location-points .check {
+      background: var(--orange); color: var(--on-accent); width: 26px; height: 26px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; font-size: 0.85rem;
+    }
+    .maps { display: grid; gap: 1rem; }
+    .maps img { border-radius: 12px; box-shadow: 0 15px 40px rgba(31,41,51,0.12); cursor: zoom-in; width: 100%; }
+
+    /* Downloads */
+    .downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+
+    /* CTA */
+    .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); color: var(--white); padding: 5rem 1.5rem; }
+    .cta-section h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-section .section-label { color: var(--orange); }
+    .cta-intro { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin-bottom: 2.5rem; }
+    .contact-grid { max-width: 520px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 1.75rem; }
+    .contact-card h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 0.5rem; }
+    .contact-card .name { font-size: 1.3rem; font-weight: 700; }
+    .contact-card .phone-big { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; color: var(--orange); margin: 0.3rem 0 1rem; display: block; }
+    .contact-card p { opacity: 0.85; font-size: 0.95rem; }
+    .contact-card .btn { margin-top: 1rem; margin-right: 0.5rem; }
+
+    /* Footer */
+    footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.08); }
+    footer strong { color: var(--white); }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 1.1rem 0 0.4rem; }
+    .btn-li { background: #0a66c2; border-color: #0a66c2; color: #fff; }
+    .btn-li:hover { background: #004182; border-color: #004182; }
+    footer .disclaimer { max-width: 760px; margin: 0.9rem auto 0; font-size: 0.75rem; opacity: 0.7; }
+
+    /* Lightbox */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 200; align-items: center; justify-content: center; padding: 1.5rem; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-height: 88vh; max-width: 92vw; border-radius: 8px; background: #fff; }
+    .lb-btn { position: absolute; color: white; background: rgba(255,255,255,0.1); border: none; cursor: pointer; font-size: 2rem; width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .lb-btn:hover { background: rgba(255,255,255,0.25); }
+    .lb-close { top: 1rem; right: 1rem; }
+    .lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+    .lb-count { position: absolute; bottom: 1rem; left: 0; right: 0; text-align: center; color: rgba(255,255,255,0.75); font-size: 0.85rem; }
+
+    /* Mobile nav */
+    .lang { display: flex; gap: 0.1rem; margin-left: 1.25rem; flex-shrink: 0; }
+    .lang a { color: rgba(255,255,255,0.7); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.45rem; border-radius: 4px; letter-spacing: 0.04em; }
+    .lang a:hover { color: var(--orange); }
+    .lang a.on { color: #fff; background: rgba(255,255,255,0.14); }
+    nav { margin-left: auto; }
+    @media (max-width: 1200px) {
+      .lang { margin-left: auto; margin-right: 0.5rem; order: 2; }
+      .menu-toggle { order: 3; }
+    }
+    @media (max-width: 420px) { .lang a { padding: 0.25rem 0.3rem; font-size: 0.7rem; } }
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; }
+    @media (max-width: 1200px) {
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 1.25rem 1.5rem; gap: 1rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 3.5rem 1rem; }
+      .hero-content { padding: 6rem 1rem 3rem; }
+      .hero-stat strong { font-size: 1.4rem; }
+      .budget-banner { padding: 1.4rem 1rem; }
+    }
+
+    /* WhatsApp zwevende knop */
+    .wa-float {
+      position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 150;
+      display: flex; align-items: center; gap: 0.6rem;
+      background: #fff; color: #128c4a; font-weight: 700; font-size: 0.95rem;
+      border: 2px solid #25d366;
+      padding: 0.65rem 1.2rem 0.65rem 0.8rem; border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,0.3); }
+    .wa-float svg { width: 32px; height: 32px; flex-shrink: 0; }
+    @media (max-width: 600px) {
+      .wa-float { right: 1rem; bottom: 1rem; padding: 0.7rem; }
+      .wa-float span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">Inductorstraat <span>41</span><small class="logo-pc">3903 KA Veenendaal</small></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#object">L’objet</a>
+      <a href="#video">Vidéo</a>
+      <a href="#galerij">Photos</a>
+      <a href="#specificaties">Caractéristiques</a>
+      <a href="#huurcondities">Conditions</a>
+      <a href="#locatie">Situation</a>
+      <a href="doelgroepen.html">Pour qui&nbsp;?</a>
+      <a href="#contact" class="btn" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Contact</a>
+    </nav>
+    <div class="lang" aria-label="Langue / Language">
+      <a href="../index.html" hreflang="nl" lang="nl">NL</a>
+      <a href="../en/index.html" hreflang="en" lang="en">EN</a>
+      <a href="../de/index.html" hreflang="de" lang="de">DE</a>
+      <a href="../fr/index.html" class="on" hreflang="fr" lang="fr" aria-current="true">FR</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="badges">
+        <span class="badge">À LOUER</span>
+        <span class="badge badge-ghost">Budget pour aménagements</span>
+        <span class="badge badge-ghost">Catégorie environnementale 4.2</span>
+      </div>
+      <h1>Inductorstraat 41<br><span>3903 KA Veenendaal</span></h1>
+      <p class="hero-sub">Bâtiment d’activité indépendant d’env. 6&nbsp;770 m² sur la zone d’activités Het Ambacht / Nijverkamp, directement sur la Rondweg-Oost.</p>
+      <p class="hero-price">Loyer <strong>440&nbsp;000&nbsp;€</strong> par an HT</p>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>5&nbsp;380 m²</strong><span>Locaux d’activité</span></div>
+        <div class="hero-stat"><strong>1&nbsp;390 m²</strong><span>Bureaux</span></div>
+        <div class="hero-stat"><strong>10×</strong><span>Portes coulissantes env. 6 m</span></div>
+        <div class="hero-stat"><strong>7,5 m</strong><span>Hauteur du hall</span></div>
+        <div class="hero-stat"><strong>183 kW</strong><span>Électricité</span></div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Planifier une visite</a>
+        <a href="#video" class="btn btn-outline">Voir la vidéo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget banner -->
+  <div class="budget-banner">
+    <div class="container">
+      <div class="bb-text">
+        <div class="bb-icon"><svg class="ico" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div>
+          <h3>Budget disponible pour des aménagements</h3>
+          <p>Le bailleur met à disposition un budget pour adapter le bâtiment à votre activité. Montant et affectation à convenir avec le bailleur.</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-navy">Discuter des possibilités</a>
+    </div>
+  </div>
+
+  <!-- Het object -->
+  <section id="object">
+    <div class="container">
+      <div class="intro-grid">
+        <div>
+          <div class="section-label">L’objet</div>
+          <h2>Spacieux, flexible et parfaitement accessible</h2>
+          <p>Ce bâtiment d’activité de grande taille, situé Inductorstraat 41 sur la zone d’activités Het Ambacht/Nijverkamp à Veenendaal, est proposé à la location. Grâce à sa situation à proximité de la Rondweg-Oost, il bénéficie d’une excellente accessibilité.</p>
+          <p>Le bâtiment comprend de vastes locaux d’activité en rez-de-chaussée, associés à des bureaux de standing répartis sur le rez-de-chaussée et le premier étage. Sa conception fonctionnelle le rend adapté à des activités très diverses, notamment l’industrie lourde (catégorie environnementale 4.2, classification d’urbanisme néerlandaise), la production, le stockage et la logistique.</p>
+          <p>Les locaux d’activité disposent notamment de dix portes coulissantes, du courant triphasé (force motrice), d’un sol en béton et de lanterneaux. Le bâtiment comprend en outre des vestiaires et une cantine avec kitchenette. Les bureaux présentent une finition soignée et bénéficient d’un abondant éclairage naturel grâce à leurs grandes baies vitrées.</p>
+        </div>
+        <div class="intro-img">
+          <img src="../images/foto_09.jpg" alt="Hall d’activité avec chemins de roulement" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg></div>
+          <h3>Vaste hall d’activité</h3>
+          <p>Env. 5&nbsp;380 m², env. 70,5&nbsp;×&nbsp;85,3 m en cinq travées de 15 m, hauteur 7,5 m. Pont roulant&nbsp;: utilisation à convenir.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></div>
+          <h3>Bureaux de standing</h3>
+          <p>Env. 1&nbsp;390 m² sur rez-de-chaussée et 1<sup>er</sup> étage, avec climatisation, éclairage LED et fenêtres ouvrantes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
+          <h3>Raccordements puissants</h3>
+          <p>Puissance électrique souscrite de 183 kW et 45 m³/h de gaz. Local technique avec compresseurs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div>
+          <h3>Atout logistique</h3>
+          <p>Directement sur la Rondweg-Oost (N233), accès rapide aux A12 et A15. Stationnement suffisant sur le terrain privatif.</p>
+        </div>
+        <div class="feature-card highlight">
+          <div class="icon"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Budget pour aménagements</h3>
+          <p>Un budget est disponible pour adapter le bâtiment à vos besoins. Montant et affectation à convenir avec le bailleur.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Catégorie environnementale 4.2</h3>
+          <p>Le plan d’urbanisme (bestemmingsplan) Het Ambacht autorise les activités jusqu’à la catégorie environnementale 4.2 incluse.</p>
+        </div>
+      </div>
+      <p style="margin-top: 2rem;"><a href="doelgroepen.html" class="btn btn-navy">Pour quelles entreprises ce bâtiment est-il adapté&nbsp;? →</a></p>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="video-section">
+    <div class="container">
+      <div class="section-label">Aperçu</div>
+      <h2>Découvrez le bâtiment</h2>
+      <p class="lead">Courte vidéo de présentation commentée (en néerlandais)&nbsp;: en une minute, un bon aperçu des espaces et de l’emplacement.</p>
+      <div class="video-wrapper">
+        <video controls playsinline preload="metadata" poster="../images/post1_teaser.jpg">
+          <source src="../video/promo.mp4" type="video/mp4" />
+          Votre navigateur ne prend pas en charge la vidéo.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerij -->
+  <section id="galerij">
+    <div class="container">
+      <div class="section-label">Photos</div>
+      <h2>Un aperçu, intérieur et extérieur</h2>
+      <p class="lead">29 photos du hall d’activité, des bureaux, de la cantine et des environs. Cliquez sur une photo pour l’agrandir.</p>
+      <div class="filters" role="group" aria-label="Filtrer les photos">
+        <button class="filter active" data-f="all">Toutes</button>
+        <button class="filter" data-f="buiten">Extérieur &amp; vues aériennes</button>
+        <button class="filter" data-f="hal">Hall d’activité</button>
+        <button class="filter" data-f="kantoor">Bureaux</button>
+        <button class="filter" data-f="kantine">Cantine &amp; kitchenette</button>
+      </div>
+      <div class="gallery-grid" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- Specificaties -->
+  <section id="specificaties" class="bg-light">
+    <div class="container">
+      <div class="section-label">Détails</div>
+      <h2>Caractéristiques &amp; équipements</h2>
+      <p class="lead">Surface totale env. 6&nbsp;770 m². Le bâtiment est livré en l’état&nbsp;; le budget disponible permet de l’adapter à vos besoins.</p>
+      <div class="specs">
+        <div class="spec-block">
+          <h3>Locaux d’activité</h3>
+          <ul class="spec-list">
+            <li><span>Surface</span><span>env. 5&nbsp;380 m² (rez-de-chaussée)</span></li>
+            <li><span>Dimensions</span><span>env. 70,5&nbsp;×&nbsp;85,3 m</span></li>
+            <li><span>Configuration</span><span>5 travées de 15 m</span></li>
+            <li><span>Hauteur</span><span>7,5 m</span></li>
+            <li><span>Portes coulissantes</span><span>10, env. 6 m de haut</span></li>
+            <li><span>Sol</span><span>Dalle béton</span></li>
+            <li><span>Lumière naturelle</span><span>Lanterneaux</span></li>
+            <li><span>Électricité</span><span>183 kW souscrits</span></li>
+            <li><span>Gaz</span><span>45 m³/h souscrits</span></li>
+            <li><span>Local technique</span><span>2 compresseurs (env. 5 m²)</span></li>
+            <li><span>Pont roulant</span><span>Utilisation à convenir</span></li>
+            <li><span>Divers</span><span>Vestiaires, sanitaires, cantine avec kitchenette</span></li>
+          </ul>
+        </div>
+        <div class="spec-block">
+          <h3>Bureaux</h3>
+          <ul class="spec-list">
+            <li><span>Surface</span><span>env. 1&nbsp;390 m²</span></li>
+            <li><span>Niveaux</span><span>Rez-de-chaussée + 1<sup>er</sup> étage</span></li>
+            <li><span>Entrée</span><span>De standing</span></li>
+            <li><span>Plafond</span><span>Faux plafond modulaire, éclairage LED</span></li>
+            <li><span>Câblage</span><span>Goulottes</span></li>
+            <li><span>Configuration</span><span>Bureaux cloisonnés</span></li>
+            <li><span>Fenêtres</span><span>Ouvrantes</span></li>
+            <li><span>Climat</span><span>Climatisation + radiateurs</span></li>
+            <li><span>Équipements</span><span>Kitchenette, sanitaires</span></li>
+          </ul>
+          <h3 style="margin-top: 2rem;">Terrain &amp; urbanisme</h3>
+          <ul class="spec-list">
+            <li><span>Année de construction</span><span>1991</span></li>
+            <li><span>Niveaux bâtis</span><span>2</span></li>
+            <li><span>Statut</span><span>Disponible, prise d’effet à convenir</span></li>
+            <li><span>Stationnement</span><span>Suffisant, sur terrain privatif</span></li>
+            <li><span>Terrain extérieur</span><span>Utilisation à convenir</span></li>
+            <li><span>Plan d’urbanisme</span><span>Het Ambacht, commune de Veenendaal</span></li>
+            <li><span>Catégorie environnementale</span><span>jusqu’à 4.2 incluse</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">Les surfaces reposent en partie sur un mesurage selon la norme néerlandaise NEN, mais sont données à titre indicatif et sans engagement.</p>
+    </div>
+  </section>
+
+  <!-- Plattegrond -->
+  <section id="plattegrond">
+    <div class="container">
+      <div class="section-label">Plan</div>
+      <h2>Configuration du hall d’activité</h2>
+      <div class="plan-grid">
+        <img class="plan-img" src="../images/plattegrond.jpg" alt="Plan du hall d’activité, Inductorstraat 41" loading="lazy" onclick="openSingle(this.src, this.alt)" />
+        <ul class="dims">
+          <li><strong>70,5 m</strong><span>largeur du hall</span></li>
+          <li><strong>85,3 m</strong><span>profondeur, bande de bureaux comprise</span></li>
+          <li><strong>5&nbsp;×&nbsp;15 m</strong><span>portée des travées</span></li>
+          <li><strong>9,8 m</strong><span>profondeur de la bande bureaux/locaux annexes</span></li>
+          <li><strong>7,5 m</strong><span>hauteur</span></li>
+        </ul>
+      </div>
+      <p class="note">Plan fourni à titre indicatif&nbsp;; aucun droit ne peut en être tiré.</p>
+    </div>
+  </section>
+
+  <!-- Huurcondities -->
+  <section id="huurcondities" class="bg-light">
+    <div class="container">
+      <div class="section-label">Conditions de location</div>
+      <h2>Prix &amp; conditions</h2>
+      <p class="lead">Contrat de location établi sur la base du bail type néerlandais (modèle ROZ) le plus récent.</p>
+      <div class="cond-grid">
+        <div class="cond price">
+          <h4>Loyer</h4>
+          <span class="amount">440&nbsp;000&nbsp;€</span>
+          <p>par an, hors TVA</p>
+        </div>
+        <div class="cond budget">
+          <h4>Aménagements</h4>
+          <p><strong>Budget disponible</strong> pour des aménagements du bâtiment. Montant et affectation à convenir avec le bailleur.</p>
+        </div>
+        <div class="cond">
+          <h4>TVA</h4>
+          <p>La location est en principe soumise à la TVA. Si le preneur ne peut pas récupérer la TVA, le loyer sera majoré d’un montant à déterminer.</p>
+        </div>
+        <div class="cond">
+          <h4>Triple net</h4>
+          <p>L’assurance du bâtiment, les charges du propriétaire et (l’ensemble de) l’entretien sont à la charge et aux risques du preneur.</p>
+        </div>
+        <div class="cond">
+          <h4>Fluides et énergie</h4>
+          <p>Le preneur contracte directement avec les fournisseurs d’énergie et de fluides et reprend le contrat actuel du bailleur.</p>
+        </div>
+        <div class="cond">
+          <h4>Indexation</h4>
+          <p>Annuelle, sur la base de l’indice des prix à la consommation (IPC Tous ménages, 2025 = 100) publié par l’office néerlandais de la statistique (CBS).</p>
+        </div>
+        <div class="cond">
+          <h4>Paiement</h4>
+          <p>Loyer, charges de services et TVA payables mensuellement d’avance.</p>
+        </div>
+        <div class="cond">
+          <h4>Garantie</h4>
+          <p>Garantie bancaire ou dépôt de garantie d’au moins 3 mois de loyer TTC, selon la solidité financière du preneur.</p>
+        </div>
+        <div class="cond">
+          <h4>Prise d’effet &amp; durées</h4>
+          <p>Date de prise d’effet, durée du bail et préavis à convenir.</p>
+        </div>
+      </div>
+      <div class="downloads">
+        <a class="btn btn-navy" href="../docs/brochure-inductorstraat-41.pdf" target="_blank" rel="noopener"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Télécharger la brochure (PDF, 8 Mo, en néerlandais)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locatie -->
+  <section id="locatie">
+    <div class="container">
+      <div class="location-grid">
+        <div>
+          <div class="section-label">Situation</div>
+          <h2>Un emplacement stratégique à Veenendaal</h2>
+          <p class="lead" style="margin-bottom: 0;">Inductorstraat 41, 3903 KA Veenendaal — zone d’activités Het Ambacht / Nijverkamp, directement sur la Rondweg-Oost (N233).</p>
+          <ul class="location-points">
+            <li><span class="check">✓</span><span>Accès rapide à l’A12, puis à l’A15, via la Rondweg-Oost</span></li>
+            <li><span class="check">✓</span><span>Arrêt de bus à moins de 500 m</span></li>
+            <li><span class="check">✓</span><span>Liaison rapide avec la gare ferroviaire (NS) Veenendaal-De Klomp</span></li>
+            <li><span class="check">✓</span><span>Au cœur de la Foodvalley et du centre des Pays-Bas</span></li>
+          </ul>
+          <a class="btn btn-navy" href="https://www.google.com/maps/place/Het+Ambacht,+Inductorstraat+41,+3903+KA+Veenendaal/" target="_blank" rel="noopener"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Ouvrir dans Google Maps</a>
+        </div>
+        <div class="maps">
+          <img src="../images/kaart_regio.jpg" alt="Carte de la région de Veenendaal avec l’A12" loading="lazy" onclick="openSingle(this.src, this.alt)" />
+          <img src="../images/kaart_terrein.jpg" alt="Carte de la zone d’activités Het Ambacht avec l’Inductorstraat" loading="lazy" onclick="openSingle(this.src, this.alt)" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2>Ce bâtiment vous intéresse&nbsp;?</h2>
+      <p class="cta-intro">Planifiez une visite sans engagement et discutez directement des possibilités offertes par le budget d’aménagement.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Visite</h3>
+          <div class="name">Eric</div>
+          <a class="phone-big" href="tel:+31633042600">+31&nbsp;6&nbsp;3304&nbsp;2600</a>
+          <p>Appelez ou écrivez sur WhatsApp pour organiser une visite.</p>
+          <a href="tel:+31633042600" class="btn">Appeler</a>
+          <a href="https://wa.me/31633042600?text=Int%C3%A9r%C3%AAt%20pour%20Inductorstraat%2041%20%C3%A0%20Veenendaal" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Inductorstraat 41, 3903 KA Veenendaal</strong> · Bâtiment d’activité à louer · <a href="tel:+31633042600" style="color: var(--orange);">+31&nbsp;6&nbsp;3304&nbsp;2600</a></p>
+    <div class="footer-links">
+      <a href="doelgroepen.html" class="btn">Pour quelles entreprises&nbsp;?</a>
+    </div>
+    <p class="disclaimer">Les informations mentionnées ne constituent pas une offre, mais des informations sommaires de nature générale, et ne valent qu’invitation à entrer en négociation. Aucun droit ne peut être tiré de leur contenu. Les surfaces et les plans sont donnés à titre indicatif.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem;">© 2026 · Tous droits réservés</p>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a class="wa-float" href="https://wa.me/31633042600?text=Bonjour%20Eric%2C%20j%E2%80%99ai%20une%20question%20concernant%20Inductorstraat%2041%20%C3%A0%20Veenendaal%C2%A0%3A%20" target="_blank" rel="noopener" aria-label="Posez votre question via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span>Des questions&nbsp;? WhatsApp Eric</span>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+    <button class="lb-btn lb-close" aria-label="Fermer" onclick="closeLightbox()">×</button>
+    <button class="lb-btn lb-prev" aria-label="Précédente" onclick="step(-1)">‹</button>
+    <img id="lightbox-img" src="" alt="" />
+    <button class="lb-btn lb-next" aria-label="Suivante" onclick="step(1)">›</button>
+    <div class="lb-count" id="lb-count"></div>
+  </div>
+
+  <script>
+    const PHOTOS = [
+      [1,'buiten','Vue aérienne, Inductorstraat 41'],
+      [2,'buiten','Façade avant avec entrée'],
+      [3,'buiten','Vue aérienne de la zone d’activités Nijverkamp'],
+      [4,'buiten','Vue aérienne du bâtiment et de ses environs'],
+      [5,'hal','Hall d’activité avec pont roulant'],
+      [6,'hal','Espace de production'],
+      [7,'hal','Vue d’ensemble du hall d’activité'],
+      [8,'hal','Hall d’activité avec chemins de roulement'],
+      [9,'hal','Hall d’activité, travée avec pont roulant'],
+      [10,'buiten','Portes coulissantes, vue extérieure'],
+      [11,'kantoor','Entrée de standing avec cage d’escalier'],
+      [12,'kantoor','Bureau paysager'],
+      [13,'kantoor','Bureau paysager baigné de lumière naturelle'],
+      [14,'kantoor','Postes de travail'],
+      [15,'kantoor','Espace de bureaux'],
+      [16,'kantoor','Accueil au premier étage'],
+      [17,'kantoor','Mezzanine et banque d’accueil'],
+      [18,'kantoor','Réception et couloir'],
+      [19,'kantoor','Bureau avec espace de réunion'],
+      [20,'kantoor','Poste de travail'],
+      [21,'kantoor','Salle de réunion'],
+      [22,'kantoor','Bureau individuel'],
+      [23,'kantoor','Bureau individuel lumineux'],
+      [24,'kantine','Coin café'],
+      [25,'kantine','Kitchenette'],
+      [26,'kantine','Cantine'],
+      [27,'kantine','Cantine avec places assises'],
+      [28,'buiten','Stationnement sur terrain privatif'],
+      [29,'buiten','Vue de l’Inductorstraat'],
+    ];
+    const pad = n => String(n).padStart(2, '0');
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = PHOTOS.map(([n, cat, alt]) =>
+      `<button class="gallery-item" data-cat="${cat}" data-n="${n}" aria-label="${alt}">
+         <img src="../images/thumbs/foto_${pad(n)}.jpg" alt="${alt}" loading="lazy" />
+       </button>`).join('');
+
+    let list = [], idx = 0;
+    const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lightbox-img'), lbCount = document.getElementById('lb-count');
+    const navBtns = lb.querySelectorAll('.lb-prev, .lb-next');
+
+    function visibleItems() { return [...gallery.querySelectorAll('.gallery-item:not(.hidden)')]; }
+    function show() {
+      const it = list[idx];
+      lbImg.src = it.src; lbImg.alt = it.alt;
+      lbCount.textContent = list.length > 1 ? `${idx + 1} / ${list.length}` : '';
+      navBtns.forEach(b => b.style.display = list.length > 1 ? 'flex' : 'none');
+    }
+    function openLb() { lb.classList.add('active'); document.body.style.overflow = 'hidden'; show(); }
+    function closeLightbox() { lb.classList.remove('active'); document.body.style.overflow = ''; }
+    function step(d) { idx = (idx + d + list.length) % list.length; show(); }
+    function openSingle(src, alt) { list = [{ src, alt }]; idx = 0; openLb(); }
+
+    gallery.addEventListener('click', e => {
+      const btn = e.target.closest('.gallery-item'); if (!btn) return;
+      const items = visibleItems();
+      list = items.map(b => ({ src: `../images/foto_${pad(+b.dataset.n)}.jpg`, alt: b.getAttribute('aria-label') }));
+      idx = items.indexOf(btn); openLb();
+    });
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+    let tx = null;
+    lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', e => {
+      if (tx === null || list.length < 2) return;
+      const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null;
+    });
+
+    document.querySelectorAll('.filter').forEach(f => f.addEventListener('click', () => {
+      document.querySelectorAll('.filter').forEach(x => x.classList.toggle('active', x === f));
+      const c = f.dataset.f;
+      gallery.querySelectorAll('.gallery-item').forEach(it => it.classList.toggle('hidden', c !== 'all' && it.dataset.cat !== c));
+    }));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        e.preventDefault();
+        if (href === '#') window.scrollTo({ top: 0, behavior: 'smooth' });
+        else document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('nav')?.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
