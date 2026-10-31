@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inductorstraat 41 Veenendaal | Bedrijfsobject te huur</title>
-  <meta name="description" content="Omvangrijk bedrijfsobject te huur aan de Inductorstraat 41 in Veenendaal. 5.380 m² bedrijfsruimte + 1.390 m² kantoor. Uitstekende bereikbaarheid A12/A15." />
+  <meta name="description" content="Zelfstandig bedrijfsobject te huur aan de Inductorstraat 41 in Veenendaal: ca. 5.380 m² bedrijfsruimte + 1.390 m² kantoor, milieucategorie 4.2, budget beschikbaar voor aanpassingen. Direct aan de Rondweg-Oost (A12/A15)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Te huur: Inductorstraat 41, Veenendaal – 6.770 m² bedrijfsobject" />
+  <meta property="og:description" content="Ca. 5.380 m² bedrijfsruimte + 1.390 m² kantoor op bedrijventerrein Het Ambacht/Nijverkamp. Milieucategorie 4.2. Budget beschikbaar voor aanpassingen." />
+  <meta property="og:image" content="https://jeroen-o.github.io/inductorstraat-41/images/post1_teaser.jpg" />
+  <meta property="og:url" content="https://jeroen-o.github.io/inductorstraat-41/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,430 +22,237 @@
       --orange-dark: #dd9a3f;
       --gray: #4a5568;
       --light: #f7fafc;
+      --line: #e2e8f0;
       --white: #ffffff;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    html { scroll-padding-top: 70px; }
     body {
       font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
       color: var(--navy);
       line-height: 1.6;
       background: var(--white);
+      overflow-x: hidden;
     }
-
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
 
     /* Header */
     header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(26, 54, 93, 0.95);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26, 54, 93, 0.96);
       backdrop-filter: blur(10px);
       padding: 0.9rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: all 0.3s;
+      display: flex; align-items: center; justify-content: space-between;
     }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--white);
-      letter-spacing: -0.02em;
-    }
+    .logo { font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: -0.02em; }
     .logo span { color: var(--orange); }
-
-    nav { display: flex; gap: 1.75rem; align-items: center; }
-    nav a {
-      color: rgba(255,255,255,0.9);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     nav a:hover { color: var(--orange); }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--orange);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.7rem 1.4rem;
-      border-radius: 6px;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--orange); color: var(--navy);
+      font-weight: 700; font-size: 0.9rem;
+      padding: 0.7rem 1.4rem; border-radius: 6px;
+      transition: all 0.2s; border: 2px solid var(--orange); cursor: pointer;
+      font-family: inherit;
     }
-    .btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--orange);
-      color: var(--orange);
-    }
+    .btn:hover { background: var(--orange-dark); border-color: var(--orange-dark); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--orange); }
     .btn-outline:hover { background: var(--orange); color: var(--navy); }
+    .btn-navy { background: var(--navy); border-color: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
 
     /* Hero */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      color: var(--white);
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('images/foto_01.jpg') center/cover no-repeat;
-      transform: scale(1.05);
-    }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; color: var(--white); overflow: hidden; padding: 0; }
+    .hero-bg { position: absolute; inset: 0; background: url('images/foto_01.jpg') center/cover no-repeat; transform: scale(1.05); }
     .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(15,39,68,0.88) 0%, rgba(26,54,93,0.7) 50%, rgba(15,39,68,0.85) 100%);
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(15,39,68,0.9) 0%, rgba(26,54,93,0.72) 50%, rgba(15,39,68,0.86) 100%);
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 7rem 1.5rem 4rem;
-    }
-
+    .hero-content { position: relative; z-index: 2; max-width: 1100px; width: 100%; margin: 0 auto; padding: 7rem 1.5rem 4rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; }
     .badge {
-      display: inline-block;
-      background: var(--orange);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
-      padding: 0.4rem 1rem;
-      border-radius: 4px;
-      margin-bottom: 1.25rem;
+      display: inline-block; background: var(--orange); color: var(--navy);
+      font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em;
+      padding: 0.4rem 1rem; border-radius: 4px;
     }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.03em;
-    }
+    .badge-ghost { background: rgba(255,255,255,0.12); color: var(--white); border: 1px solid rgba(255,255,255,0.35); }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.03em; }
     .hero h1 span { color: var(--orange); }
-
-    .hero-sub {
-      font-size: 1.25rem;
-      font-weight: 500;
-      opacity: 0.95;
-      margin-bottom: 1.75rem;
-      max-width: 560px;
-    }
-
-    .hero-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem 2.5rem;
-      margin-bottom: 2.25rem;
-    }
-    .hero-stat strong {
-      display: block;
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--orange);
-    }
-    .hero-stat span {
-      font-size: 0.9rem;
-      opacity: 0.85;
-    }
-
+    .hero-sub { font-size: 1.2rem; font-weight: 500; opacity: 0.95; margin-bottom: 0.6rem; max-width: 620px; }
+    .hero-price { font-size: 1.05rem; margin-bottom: 1.75rem; opacity: 0.95; }
+    .hero-price strong { color: var(--orange); font-size: 1.3rem; }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; margin-bottom: 2.25rem; }
+    .hero-stat strong { display: block; font-size: 1.75rem; font-weight: 800; color: var(--orange); line-height: 1.2; }
+    .hero-stat span { font-size: 0.88rem; opacity: 0.85; }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* Budget banner */
+    .budget-banner { background: var(--orange); color: var(--navy); padding: 1.6rem 1.5rem; }
+    .budget-banner .container { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; justify-content: space-between; }
+    .budget-banner .bb-text { display: flex; gap: 1rem; align-items: center; flex: 1 1 480px; }
+    .budget-banner .bb-icon { font-size: 2rem; flex-shrink: 0; }
+    .budget-banner h3 { font-size: 1.2rem; font-weight: 800; line-height: 1.25; }
+    .budget-banner p { font-size: 0.95rem; font-weight: 500; }
 
     /* Sections */
     section { padding: 5rem 1.5rem; }
     .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; color: var(--orange-dark); text-transform: uppercase; margin-bottom: 0.6rem; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--navy); line-height: 1.2; }
+    .lead { font-size: 1.08rem; color: var(--gray); max-width: 680px; margin-bottom: 2.5rem; }
+    .bg-light { background: var(--light); }
 
-    .section-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--orange);
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-    }
-    h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      color: var(--navy);
-    }
-    .lead {
-      font-size: 1.1rem;
-      color: var(--gray);
-      max-width: 640px;
-      margin-bottom: 2.5rem;
-    }
+    /* Intro */
+    .intro-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: start; }
+    .intro-grid p { color: var(--gray); margin-bottom: 1rem; }
+    .intro-img { border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(26,54,93,0.15); }
+    @media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
     /* Kenmerken */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-    .feature-card {
-      background: var(--light);
-      border-radius: 12px;
-      padding: 1.75rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(26,54,93,0.1);
-    }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .feature-card { background: var(--light); border-radius: 12px; padding: 1.75rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(26,54,93,0.1); }
     .feature-card .icon {
-      width: 48px; height: 48px;
-      background: var(--navy);
-      color: var(--orange);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      width: 48px; height: 48px; background: var(--navy); color: var(--orange);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1rem;
     }
-    .feature-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-    .feature-card p { color: var(--gray); font-size: 0.95rem; }
+    .feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { color: var(--gray); font-size: 0.93rem; }
+    .feature-card.highlight { background: var(--navy); color: var(--white); }
+    .feature-card.highlight .icon { background: var(--orange); color: var(--navy); }
+    .feature-card.highlight p { color: rgba(255,255,255,0.8); }
 
-    /* Video section */
-    .video-section {
-      background: var(--navy-dark);
-      color: var(--white);
-    }
+    /* Video */
+    .video-section { background: var(--navy-dark); color: var(--white); }
     .video-section h2 { color: var(--white); }
     .video-section .lead { color: rgba(255,255,255,0.75); }
-
-    .video-wrapper {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-      background: #000;
-      aspect-ratio: 16/9;
-    }
-    .video-wrapper video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .video-section .section-label { color: var(--orange); }
+    .video-wrapper { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.35); background: #000; aspect-ratio: 16/9; }
+    .video-wrapper video { width: 100%; height: 100%; object-fit: cover; }
 
     /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .filter {
+      background: var(--light); border: 1px solid var(--line); color: var(--navy);
+      font-family: inherit; font-weight: 600; font-size: 0.85rem;
+      padding: 0.45rem 1rem; border-radius: 999px; cursor: pointer; transition: all 0.2s;
     }
-    .gallery-item {
-      border-radius: 10px;
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      cursor: pointer;
-      position: relative;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
+    .filter:hover { border-color: var(--navy); }
+    .filter.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.85rem; }
+    .gallery-item { border-radius: 10px; overflow: hidden; aspect-ratio: 3/2; cursor: zoom-in; position: relative; background: var(--line); border: 0; padding: 0; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item.hidden { display: none; }
 
-    /* Specs table */
-    .specs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    @media (max-width: 768px) {
-      .specs { grid-template-columns: 1fr; }
-    }
-    .spec-block h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 3px solid var(--orange);
-      display: inline-block;
-    }
-    .spec-list {
-      list-style: none;
-    }
-    .spec-list li {
-      padding: 0.65rem 0;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      font-size: 0.95rem;
-    }
-    .spec-list li span:last-child {
-      font-weight: 600;
-      color: var(--navy);
-      text-align: right;
-    }
+    /* Specs */
+    .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; }
+    @media (max-width: 768px) { .specs { grid-template-columns: 1fr; } }
+    .spec-block h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--orange); display: inline-block; }
+    .spec-list { list-style: none; }
+    .spec-list li { padding: 0.62rem 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; font-size: 0.94rem; }
+    .spec-list li span:first-child { color: var(--gray); }
+    .spec-list li span:last-child { font-weight: 600; color: var(--navy); text-align: right; }
+    .note { font-size: 0.82rem; color: var(--gray); margin-top: 1.5rem; font-style: italic; }
 
-    /* Location */
-    .location-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-    @media (max-width: 800px) {
-      .location-grid { grid-template-columns: 1fr; }
-    }
-    .location-points {
-      list-style: none;
-      margin-top: 1.5rem;
-    }
-    .location-points li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      margin-bottom: 1.1rem;
-      font-size: 1.02rem;
-    }
+    /* Plattegrond */
+    .plan-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 2.5rem; align-items: center; }
+    @media (max-width: 860px) { .plan-grid { grid-template-columns: 1fr; } }
+    .plan-img { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; cursor: zoom-in; }
+    .dims { list-style: none; }
+    .dims li { display: flex; gap: 0.9rem; align-items: baseline; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+    .dims strong { font-size: 1.4rem; font-weight: 800; color: var(--navy); min-width: 7.5rem; }
+    .dims span { color: var(--gray); font-size: 0.93rem; }
+
+    /* Huurcondities */
+    .cond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .cond { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem 1.5rem; }
+    .cond h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange-dark); margin-bottom: 0.4rem; }
+    .cond p { font-size: 0.93rem; color: var(--gray); }
+    .cond p strong { color: var(--navy); }
+    .cond.price { background: var(--navy); border-color: var(--navy); }
+    .cond.price h4 { color: var(--orange); }
+    .cond.price p { color: rgba(255,255,255,0.8); }
+    .cond.price .amount { display: block; font-size: 1.8rem; font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 0.25rem; }
+    .cond.budget { background: #fff7eb; border-color: var(--orange); }
+
+    /* Locatie */
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+    @media (max-width: 860px) { .location-grid { grid-template-columns: 1fr; } }
+    .location-points { list-style: none; margin: 1.5rem 0; }
+    .location-points li { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1rem; font-size: 1rem; }
     .location-points .check {
-      background: var(--orange);
-      color: var(--navy);
-      width: 26px; height: 26px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      flex-shrink: 0;
-      font-size: 0.85rem;
+      background: var(--orange); color: var(--navy); width: 26px; height: 26px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; font-size: 0.85rem;
     }
-    .location-img {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 15px 40px rgba(26,54,93,0.15);
-    }
+    .maps { display: grid; gap: 1rem; }
+    .maps img { border-radius: 12px; box-shadow: 0 15px 40px rgba(26,54,93,0.12); cursor: zoom-in; width: 100%; }
+
+    /* Downloads */
+    .downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
 
     /* CTA */
-    .cta-section {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-      color: var(--white);
-      text-align: center;
-      padding: 5rem 1.5rem;
-    }
+    .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); color: var(--white); padding: 5rem 1.5rem; }
     .cta-section h2 { color: var(--white); margin-bottom: 0.75rem; }
-    .cta-section p {
-      font-size: 1.15rem;
-      opacity: 0.9;
-      max-width: 520px;
-      margin: 0 auto 2rem;
-    }
-    .phone-big {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 800;
-      color: var(--orange);
-      margin-bottom: 0.5rem;
-    }
-    .cta-section .btn {
-      font-size: 1.05rem;
-      padding: 0.95rem 2rem;
-      margin-top: 1rem;
-    }
+    .cta-section .section-label { color: var(--orange); }
+    .cta-intro { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin-bottom: 2.5rem; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 1.75rem; }
+    .contact-card h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 0.5rem; }
+    .contact-card .name { font-size: 1.3rem; font-weight: 700; }
+    .contact-card .phone-big { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 800; color: var(--orange); margin: 0.3rem 0 1rem; display: block; }
+    .contact-card p { opacity: 0.85; font-size: 0.95rem; }
+    .contact-card .btn { margin-top: 1rem; margin-right: 0.5rem; }
 
     /* Footer */
-    footer {
-      background: var(--navy-dark);
-      color: rgba(255,255,255,0.7);
-      padding: 2rem 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
+    footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.08); }
     footer strong { color: var(--white); }
+    footer .disclaimer { max-width: 760px; margin: 0.9rem auto 0; font-size: 0.75rem; opacity: 0.7; }
 
     /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 200; align-items: center; justify-content: center; padding: 1.5rem; }
     .lightbox.active { display: flex; }
-    .lightbox img {
-      max-height: 90vh;
-      max-width: 95vw;
-      border-radius: 8px;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 1.25rem; right: 1.5rem;
-      color: white;
-      font-size: 2rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
+    .lightbox img { max-height: 88vh; max-width: 92vw; border-radius: 8px; background: #fff; }
+    .lb-btn { position: absolute; color: white; background: rgba(255,255,255,0.1); border: none; cursor: pointer; font-size: 2rem; width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .lb-btn:hover { background: rgba(255,255,255,0.25); }
+    .lb-close { top: 1rem; right: 1rem; }
+    .lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+    .lb-count { position: absolute; bottom: 1rem; left: 0; right: 0; text-align: center; color: rgba(255,255,255,0.75); font-size: 0.85rem; }
 
     /* Mobile nav */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; }
+    @media (max-width: 900px) {
       nav { display: none; }
       .menu-toggle { display: block; }
-      nav.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0; right: 0;
-        background: var(--navy);
-        padding: 1.25rem;
-        gap: 1rem;
-      }
+      nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 1.25rem 1.5rem; gap: 1rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 3.5rem 1rem; }
+      .hero-content { padding: 6rem 1rem 3rem; }
+      .hero-stat strong { font-size: 1.4rem; }
+      .budget-banner { padding: 1.4rem 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <a href="#" class="logo">Inductorstraat <span>41</span></a>
     <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
     <nav>
-      <a href="#kenmerken">Kenmerken</a>
+      <a href="#object">Het object</a>
       <a href="#video">Video</a>
-      <a href="#galerij">Galerij</a>
+      <a href="#galerij">Foto’s</a>
       <a href="#specificaties">Specificaties</a>
+      <a href="#huurcondities">Huurcondities</a>
       <a href="#locatie">Locatie</a>
-      <a href="#contact" class="btn" style="padding: 0.55rem 1.1rem; font-size: 0.85rem;">Contact</a>
+      <a href="#contact" class="btn" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Contact</a>
     </nav>
   </header>
 
@@ -447,27 +260,21 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="badge">TE HUUR</div>
+      <div class="badges">
+        <span class="badge">TE HUUR</span>
+        <span class="badge badge-ghost">Budget voor aanpassingen</span>
+        <span class="badge badge-ghost">Milieucategorie 4.2</span>
+      </div>
       <h1>Inductorstraat 41<br><span>Veenendaal</span></h1>
-      <p class="hero-sub">Omvangrijk bedrijfsobject op bedrijventerrein Nijverkamp. Direct beschikbaar.</p>
-      
+      <p class="hero-sub">Zelfstandig bedrijfsobject van ca. 6.770 m² op bedrijventerrein Het Ambacht / Nijverkamp, direct aan de Rondweg-Oost.</p>
+      <p class="hero-price">Huurprijs <strong>€ 440.000</strong> per jaar, excl. btw</p>
+
       <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>5.380 m²</strong>
-          <span>Bedrijfsruimte</span>
-        </div>
-        <div class="hero-stat">
-          <strong>1.390 m²</strong>
-          <span>Kantoorruimte</span>
-        </div>
-        <div class="hero-stat">
-          <strong>10×</strong>
-          <span>Schuifdeuren 6m</span>
-        </div>
-        <div class="hero-stat">
-          <strong>183 kW</strong>
-          <span>Elektra</span>
-        </div>
+        <div class="hero-stat"><strong>5.380 m²</strong><span>Bedrijfsruimte</span></div>
+        <div class="hero-stat"><strong>1.390 m²</strong><span>Kantoorruimte</span></div>
+        <div class="hero-stat"><strong>10×</strong><span>Schuifdeuren ca. 6 m</span></div>
+        <div class="hero-stat"><strong>7,5 m</strong><span>Hoogte hal</span></div>
+        <div class="hero-stat"><strong>183 kW</strong><span>Elektra</span></div>
       </div>
 
       <div class="hero-cta">
@@ -477,33 +284,66 @@
     </div>
   </section>
 
-  <!-- Kenmerken -->
-  <section id="kenmerken">
+  <!-- Budget banner -->
+  <div class="budget-banner">
     <div class="container">
-      <div class="section-label">Het object</div>
-      <h2>Ruim, flexibel en goed bereikbaar</h2>
-      <p class="lead">Een veelzijdig bedrijfsobject dat geschikt is voor uiteenlopende activiteiten: van zware industrie en productie tot opslag en logistiek.</p>
+      <div class="bb-text">
+        <div class="bb-icon">🛠️</div>
+        <div>
+          <h3>Budget beschikbaar voor aanpassingen</h3>
+          <p>Verhuurder stelt budget beschikbaar om het pand af te stemmen op uw bedrijfsvoering. Omvang en invulling in overleg.</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-navy">Bespreek de mogelijkheden</a>
+    </div>
+  </div>
+
+  <!-- Het object -->
+  <section id="object">
+    <div class="container">
+      <div class="intro-grid">
+        <div>
+          <div class="section-label">Het object</div>
+          <h2>Ruim, flexibel en uitstekend bereikbaar</h2>
+          <p>Aan de Inductorstraat 41 op bedrijventerrein Het Ambacht/Nijverkamp in Veenendaal komt dit omvangrijke bedrijfsobject beschikbaar voor verhuur. Dankzij de ligging nabij de Rondweg-Oost profiteert het object van een uitstekende bereikbaarheid.</p>
+          <p>Het object bestaat uit een royale bedrijfsruimte op de begane grond, gecombineerd met representatieve kantoorruimte verdeeld over de begane grond en eerste verdieping. De functionele opzet maakt het pand geschikt voor uiteenlopende bedrijfsactiviteiten, waaronder zware industrie (milieucategorie 4.2), productie, opslag en logistiek.</p>
+          <p>De bedrijfsruimte is onder meer voorzien van tien schuifdeuren, krachtstroom, een betonvloer en lichtstraten. Daarnaast zijn kleedruimten en een kantine met pantry aanwezig. De kantoren hebben een nette afwerking en veel natuurlijke lichtinval dankzij de grote raampartijen.</p>
+        </div>
+        <div class="intro-img">
+          <img src="images/foto_09.jpg" alt="Bedrijfshal met kraanbanen" loading="lazy" />
+        </div>
+      </div>
 
       <div class="features">
         <div class="feature-card">
           <div class="icon">🏭</div>
-          <h3>Royale bedrijfsruimte</h3>
-          <p>Ca. 5.380 m² met betonvloer, lichtstraten, krachtstroom en tien hoge schuifdeuren.</p>
+          <h3>Royale bedrijfshal</h3>
+          <p>Ca. 5.380 m², ca. 70,5 × 85,3 m in vijf beuken van 15 m, hoogte 7,5 m. Kraanbaan in overleg.</p>
         </div>
         <div class="feature-card">
           <div class="icon">🏢</div>
           <h3>Representatieve kantoren</h3>
-          <p>1.390 m² kantoorruimte over begane grond en eerste verdieping, met veel daglicht en airco.</p>
+          <p>Ca. 1.390 m² over begane grond en 1e verdieping, met airco, LED en te openen ramen.</p>
         </div>
         <div class="feature-card">
           <div class="icon">⚡</div>
-          <h3>Sterke aansluitingen</h3>
-          <p>183 kW elektra en 45 m³/h gas. Technische ruimte met compressoren aanwezig.</p>
+          <h3>Zware aansluitingen</h3>
+          <p>183 kW gecontracteerd transportvermogen elektra en 45 m³/h gas. Technische ruimte met compressoren.</p>
         </div>
         <div class="feature-card">
           <div class="icon">🚛</div>
-          <h3>Uitstekende logistiek</h3>
-          <p>Direct aan de Rondweg-Oost, snelle verbinding met A12 en A15. Ideaal voor distributie.</p>
+          <h3>Logistiek sterk</h3>
+          <p>Direct aan de Rondweg-Oost (N233), snel op A12 en A15. Voldoende parkeren op eigen terrein.</p>
+        </div>
+        <div class="feature-card highlight">
+          <div class="icon">🛠️</div>
+          <h3>Budget voor aanpassingen</h3>
+          <p>Er is budget beschikbaar om het pand aan te passen aan uw wensen. In overleg met verhuurder.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚙️</div>
+          <h3>Milieucategorie 4.2</h3>
+          <p>Bestemmingsplan Het Ambacht staat bedrijvigheid toe tot en met milieucategorie 4.2.</p>
         </div>
       </div>
     </div>
@@ -512,12 +352,11 @@
   <!-- Video -->
   <section id="video" class="video-section">
     <div class="container">
-      <div class="section-label" style="color: var(--orange);">Impressie</div>
+      <div class="section-label">Impressie</div>
       <h2>Bekijk het object</h2>
-      <p class="lead">Korte promotievideo met voice-over. Krijg direct een goed beeld van de ruimtes en de locatie.</p>
-
+      <p class="lead">Korte promotievideo met voice-over: in één minuut een goed beeld van de ruimtes en de locatie.</p>
       <div class="video-wrapper">
-        <video controls playsinline poster="images/post1_teaser.jpg">
+        <video controls playsinline preload="metadata" poster="images/post1_teaser.jpg">
           <source src="video/promo.mp4" type="video/mp4" />
           Uw browser ondersteunt geen video.
         </video>
@@ -530,74 +369,134 @@
     <div class="container">
       <div class="section-label">Foto’s</div>
       <h2>Een kijkje binnen en buiten</h2>
-      <p class="lead">Selectie van de belangrijkste beelden van het object.</p>
-
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_01.jpg" alt="Luchtfoto Inductorstraat 41" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_03.jpg" alt="Overzicht bedrijventerrein" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_05.jpg" alt="Bedrijfsruimte interieur" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_07.jpg" alt="Productiehal" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_10.jpg" alt="Buitenzijde met overheaddeuren" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_15.jpg" alt="Kantoorruimte" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_20.jpg" alt="Kantoor interieur" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_25.jpg" alt="Kantine / pantry" loading="lazy" />
-        </div>
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img src="images/foto_02.jpg" alt="Straatbeeld" loading="lazy" />
-        </div>
+      <p class="lead">29 foto’s van bedrijfshal, kantoren, kantine en omgeving. Klik op een foto om te vergroten.</p>
+      <div class="filters" role="group" aria-label="Filter foto's">
+        <button class="filter active" data-f="all">Alle</button>
+        <button class="filter" data-f="buiten">Buiten &amp; luchtfoto</button>
+        <button class="filter" data-f="hal">Bedrijfshal</button>
+        <button class="filter" data-f="kantoor">Kantoren</button>
+        <button class="filter" data-f="kantine">Kantine &amp; pantry</button>
       </div>
+      <div class="gallery-grid" id="gallery"></div>
     </div>
   </section>
 
   <!-- Specificaties -->
-  <section id="specificaties" style="background: var(--light);">
+  <section id="specificaties" class="bg-light">
     <div class="container">
       <div class="section-label">Details</div>
-      <h2>Specificaties & voorzieningen</h2>
-      <p class="lead">Het object wordt opgeleverd in de huidige staat.</p>
-
+      <h2>Specificaties &amp; voorzieningen</h2>
+      <p class="lead">Totale vloeroppervlakte ca. 6.770 m². Het object wordt opgeleverd in de huidige staat; met het beschikbare budget kan het worden aangepast aan uw wensen.</p>
       <div class="specs">
         <div class="spec-block">
           <h3>Bedrijfsruimte</h3>
           <ul class="spec-list">
-            <li><span>Oppervlakte</span><span>ca. 5.380 m²</span></li>
+            <li><span>Oppervlakte</span><span>ca. 5.380 m² (begane grond)</span></li>
+            <li><span>Afmetingen</span><span>ca. 70,5 × 85,3 m</span></li>
+            <li><span>Indeling</span><span>5 beuken van 15 m</span></li>
+            <li><span>Hoogte</span><span>7,5 m</span></li>
             <li><span>Schuifdeuren</span><span>10 stuks, ca. 6 m hoog</span></li>
             <li><span>Vloer</span><span>Betonvloer</span></li>
-            <li><span>Verlichting</span><span>Lichtstraten</span></li>
+            <li><span>Daglicht</span><span>Lichtstraten</span></li>
             <li><span>Elektra</span><span>183 kW gecontracteerd</span></li>
-            <li><span>Gas</span><span>45 m³/h</span></li>
-            <li><span>Kraanbaan</span><span>Mogelijk in overleg</span></li>
-            <li><span>Overig</span><span>Kleedruimte, sanitair, kantine</span></li>
+            <li><span>Gas</span><span>45 m³/h gecontracteerd</span></li>
+            <li><span>Technische ruimte</span><span>2 compressoren (ca. 5 m²)</span></li>
+            <li><span>Kraanbaan</span><span>Gebruik in nader overleg</span></li>
+            <li><span>Overig</span><span>Kleedruimte, sanitair, kantine met pantry</span></li>
           </ul>
         </div>
         <div class="spec-block">
           <h3>Kantoorruimte</h3>
           <ul class="spec-list">
             <li><span>Oppervlakte</span><span>ca. 1.390 m²</span></li>
-            <li><span>Verdiepingen</span><span>Begane grond + 1e etage</span></li>
-            <li><span>Afwerking</span><span>Systeemplafond, LED</span></li>
-            <li><span>Klimaat</span><span>Airconditioning + radiatoren</span></li>
-            <li><span>Ramen</span><span>Te openen, veel daglicht</span></li>
-            <li><span>Voorzieningen</span><span>Pantry, sanitair</span></li>
-            <li><span>Indeling</span><span>Kamerindeling aanwezig</span></li>
+            <li><span>Verdiepingen</span><span>Begane grond + 1e verdieping</span></li>
             <li><span>Entree</span><span>Representatief</span></li>
+            <li><span>Plafond</span><span>Systeemplafond, LED-verlichting</span></li>
+            <li><span>Bekabeling</span><span>Kabelgoten</span></li>
+            <li><span>Indeling</span><span>Kamerindeling aanwezig</span></li>
+            <li><span>Ramen</span><span>Te openen</span></li>
+            <li><span>Klimaat</span><span>Airconditioning + radiatoren</span></li>
+            <li><span>Voorzieningen</span><span>Pantry, sanitair</span></li>
+          </ul>
+          <h3 style="margin-top: 2rem;">Terrein &amp; bestemming</h3>
+          <ul class="spec-list">
+            <li><span>Parkeren</span><span>Voldoende, op eigen terrein</span></li>
+            <li><span>Buitenterrein</span><span>Gebruik in nader overleg</span></li>
+            <li><span>Bestemmingsplan</span><span>Het Ambacht, gem. Veenendaal</span></li>
+            <li><span>Milieucategorie</span><span>t/m 4.2</span></li>
           </ul>
         </div>
+      </div>
+      <p class="note">Metrages zijn deels gebaseerd op een NEN-meting, maar indicatief en vrijblijvend van aard.</p>
+    </div>
+  </section>
+
+  <!-- Plattegrond -->
+  <section id="plattegrond">
+    <div class="container">
+      <div class="section-label">Plattegrond</div>
+      <h2>Indeling bedrijfshal</h2>
+      <div class="plan-grid">
+        <img class="plan-img" src="images/plattegrond.jpg" alt="Plattegrondtekening bedrijfshal Inductorstraat 41" loading="lazy" onclick="openSingle(this.src, this.alt)" />
+        <ul class="dims">
+          <li><strong>70,5 m</strong><span>breedte hal</span></li>
+          <li><strong>85,3 m</strong><span>diepte incl. kantoorstrook</span></li>
+          <li><strong>5 × 15 m</strong><span>overspanning beuken</span></li>
+          <li><strong>9,8 m</strong><span>diepte kantoor-/voorzieningenstrook</span></li>
+          <li><strong>7,5 m</strong><span>hoogte</span></li>
+        </ul>
+      </div>
+      <p class="note">Tekening is indicatief; hieraan kunnen geen rechten worden ontleend.</p>
+    </div>
+  </section>
+
+  <!-- Huurcondities -->
+  <section id="huurcondities" class="bg-light">
+    <div class="container">
+      <div class="section-label">Huurcondities</div>
+      <h2>Prijs &amp; voorwaarden</h2>
+      <p class="lead">Huurovereenkomst op basis van het meest recente ROZ-model.</p>
+      <div class="cond-grid">
+        <div class="cond price">
+          <h4>Huurprijs</h4>
+          <span class="amount">€ 440.000</span>
+          <p>per jaar, exclusief btw</p>
+        </div>
+        <div class="cond budget">
+          <h4>Aanpassingen</h4>
+          <p><strong>Budget beschikbaar</strong> voor aanpassingen aan het pand. Omvang en invulling in overleg met verhuurder.</p>
+        </div>
+        <div class="cond">
+          <h4>Btw</h4>
+          <p>Uitgangspunt is btw-belaste verhuur. Kan huurder de btw niet verrekenen, dan wordt de huurprijs met een nader vast te stellen bedrag verhoogd.</p>
+        </div>
+        <div class="cond">
+          <h4>Triple net</h4>
+          <p>Opstalverzekering, eigenaarslasten en (al) het onderhoud komen voor rekening en risico van huurder.</p>
+        </div>
+        <div class="cond">
+          <h4>Nutsvoorzieningen</h4>
+          <p>Huurder is direct contractant bij de nutsbedrijven en neemt het huidige contract van verhuurder over.</p>
+        </div>
+        <div class="cond">
+          <h4>Indexering</h4>
+          <p>Jaarlijks, op basis van CPI-Alle Huishoudens (2025 = 100) van het CBS.</p>
+        </div>
+        <div class="cond">
+          <h4>Betaling</h4>
+          <p>Huur, servicekosten en btw per maand vooruit.</p>
+        </div>
+        <div class="cond">
+          <h4>Zekerheid</h4>
+          <p>Bankgarantie of waarborgsom van minimaal 3 maanden huur incl. btw, afhankelijk van de financiële gegoedheid.</p>
+        </div>
+        <div class="cond">
+          <h4>Aanvaarding &amp; termijnen</h4>
+          <p>Aanvaarding, huurtermijn en opzegtermijn in overleg.</p>
+        </div>
+      </div>
+      <div class="downloads">
+        <a class="btn btn-navy" href="docs/brochure-inductorstraat-41.pdf" target="_blank" rel="noopener">⬇ Download brochure (PDF, 8 MB)</a>
       </div>
     </div>
   </section>
@@ -609,80 +508,151 @@
         <div>
           <div class="section-label">Ligging</div>
           <h2>Strategisch gelegen in Veenendaal</h2>
-          <p class="lead" style="margin-bottom: 0;">Bedrijventerrein Nijverkamp / Het Ambacht, direct aan de Rondweg-Oost.</p>
-          
+          <p class="lead" style="margin-bottom: 0;">Inductorstraat 41, 3903 KA Veenendaal — bedrijventerrein Het Ambacht / Nijverkamp, direct aan de Rondweg-Oost (N233).</p>
           <ul class="location-points">
-            <li>
-              <span class="check">✓</span>
-              <span>Snelle verbinding met de A12 en A15</span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>Goede bereikbaarheid met openbaar vervoer</span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>Nabij NS-station Veenendaal-De Klomp</span>
-            </li>
-            <li>
-              <span class="check">✓</span>
-              <span>Centrale ligging in de Foodvalley / Midden-Nederland</span>
-            </li>
+            <li><span class="check">✓</span><span>Via de Rondweg-Oost snel op de A12 en verderop de A15</span></li>
+            <li><span class="check">✓</span><span>Diverse bushaltes in de directe omgeving</span></li>
+            <li><span class="check">✓</span><span>Snelle verbinding naar NS-station Veenendaal-De Klomp</span></li>
+            <li><span class="check">✓</span><span>Centraal in Foodvalley en Midden-Nederland</span></li>
           </ul>
+          <a class="btn btn-navy" href="https://www.google.com/maps/place/Het+Ambacht,+Inductorstraat+41,+3903+KA+Veenendaal/" target="_blank" rel="noopener">📍 Open in Google Maps</a>
         </div>
-        <div class="location-img">
-          <img src="images/foto_03.jpg" alt="Luchtfoto locatie Nijverkamp" loading="lazy" />
+        <div class="maps">
+          <img src="images/kaart_regio.jpg" alt="Kaart regio Veenendaal met A12" loading="lazy" onclick="openSingle(this.src, this.alt)" />
+          <img src="images/kaart_terrein.jpg" alt="Kaart bedrijventerrein Het Ambacht met Inductorstraat" loading="lazy" onclick="openSingle(this.src, this.alt)" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA / Contact -->
+  <!-- Contact -->
   <section id="contact" class="cta-section">
     <div class="container">
-      <div class="section-label" style="color: var(--orange);">Contact</div>
+      <div class="section-label">Contact</div>
       <h2>Interesse in dit object?</h2>
-      <p>Plan een vrijblijvende rondleiding en ervaar zelf of dit de juiste plek is voor uw bedrijf.</p>
-      
-      <div class="phone-big">06-33042600</div>
-      <p style="margin-bottom: 0.25rem; opacity: 0.8;">Eric</p>
-      
-      <a href="tel:+31633042600" class="btn">Bel direct</a>
+      <p class="cta-intro">Plan een vrijblijvende rondleiding en bespreek direct de mogelijkheden van het aanpassingsbudget.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Rondleiding</h3>
+          <div class="name">Eric</div>
+          <a class="phone-big" href="tel:+31633042600">06-33042600</a>
+          <p>Bel of app voor een bezichtiging.</p>
+          <a href="tel:+31633042600" class="btn">Bel direct</a>
+          <a href="https://wa.me/31633042600?text=Interesse%20in%20Inductorstraat%2041%20Veenendaal" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp</a>
+        </div>
+        <div class="contact-card">
+          <h3>Makelaar</h3>
+          <div class="name">CMC Bedrijfsmakelaars</div>
+          <a class="phone-big" href="tel:+31318501000">0318-50 10 00</a>
+          <p>Newtonstraat 30, 3902 HP Veenendaal<br><a href="mailto:info@cmc.nl" style="color: var(--orange);">info@cmc.nl</a> · <a href="https://www.cmc.nl" target="_blank" rel="noopener" style="color: var(--orange);">cmc.nl</a></p>
+          <a href="https://www.fundainbusiness.nl/bedrijfshal/veenendaal/object-80921123-inductorstraat-41/" target="_blank" rel="noopener" class="btn btn-outline">Bekijk op Funda in Business</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p><strong>Inductorstraat 41, Veenendaal</strong> · Bedrijfsobject te huur · <a href="tel:+31633042600" style="color: var(--orange);">06-33042600</a></p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">© 2026 · Alle rechten voorbehouden</p>
+    <p class="disclaimer">De vermelde informatie behelst geen aanbod, maar globale informatie van algemene aard en is niet meer dan een uitnodiging om in onderhandeling te treden. Aan de inhoud kunnen geen rechten worden ontleend. Metrages en tekeningen zijn indicatief.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem;">© 2026 · Alle rechten voorbehouden</p>
   </footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" aria-label="Sluiten">×</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto vergroot">
+    <button class="lb-btn lb-close" aria-label="Sluiten" onclick="closeLightbox()">×</button>
+    <button class="lb-btn lb-prev" aria-label="Vorige" onclick="step(-1)">‹</button>
     <img id="lightbox-img" src="" alt="" />
+    <button class="lb-btn lb-next" aria-label="Volgende" onclick="step(1)">›</button>
+    <div class="lb-count" id="lb-count"></div>
   </div>
 
   <script>
-    function openLightbox(el) {
-      const img = el.querySelector('img');
-      document.getElementById('lightbox-img').src = img.src;
-      document.getElementById('lightbox').classList.add('active');
-      document.body.style.overflow = 'hidden';
+    const PHOTOS = [
+      [1,'buiten','Luchtfoto Inductorstraat 41'],
+      [2,'buiten','Voorgevel met entree'],
+      [3,'buiten','Luchtfoto bedrijventerrein Nijverkamp'],
+      [4,'buiten','Luchtfoto object en omgeving'],
+      [5,'hal','Bedrijfshal met kraanbaan'],
+      [6,'hal','Productieruimte'],
+      [7,'hal','Bedrijfshal overzicht'],
+      [8,'hal','Bedrijfshal met kraanbanen'],
+      [9,'hal','Bedrijfshal, beuk met kraan'],
+      [10,'buiten','Schuifdeuren aan de buitenzijde'],
+      [11,'kantoor','Representatieve entree met trappenhuis'],
+      [12,'kantoor','Kantoortuin'],
+      [13,'kantoor','Kantoortuin met daglicht'],
+      [14,'kantoor','Kantoorwerkplekken'],
+      [15,'kantoor','Kantoorruimte'],
+      [16,'kantoor','Ontvangst eerste verdieping'],
+      [17,'kantoor','Vide en ontvangstbalie'],
+      [18,'kantoor','Receptie en gang'],
+      [19,'kantoor','Kantoor met vergaderplek'],
+      [20,'kantoor','Kantoorwerkplek'],
+      [21,'kantoor','Vergaderruimte'],
+      [22,'kantoor','Kantoorkamer'],
+      [23,'kantoor','Kantoorkamer met daglicht'],
+      [24,'kantine','Koffiecorner'],
+      [25,'kantine','Pantry'],
+      [26,'kantine','Kantine'],
+      [27,'kantine','Kantine met zitplaatsen'],
+      [28,'buiten','Parkeren op eigen terrein'],
+      [29,'buiten','Straatbeeld Inductorstraat'],
+    ];
+    const pad = n => String(n).padStart(2, '0');
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = PHOTOS.map(([n, cat, alt]) =>
+      `<button class="gallery-item" data-cat="${cat}" data-n="${n}" aria-label="${alt}">
+         <img src="images/thumbs/foto_${pad(n)}.jpg" alt="${alt}" loading="lazy" />
+       </button>`).join('');
+
+    let list = [], idx = 0;
+    const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lightbox-img'), lbCount = document.getElementById('lb-count');
+    const navBtns = lb.querySelectorAll('.lb-prev, .lb-next');
+
+    function visibleItems() { return [...gallery.querySelectorAll('.gallery-item:not(.hidden)')]; }
+    function show() {
+      const it = list[idx];
+      lbImg.src = it.src; lbImg.alt = it.alt;
+      lbCount.textContent = list.length > 1 ? `${idx + 1} / ${list.length}` : '';
+      navBtns.forEach(b => b.style.display = list.length > 1 ? 'flex' : 'none');
     }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-      document.body.style.overflow = '';
-    }
+    function openLb() { lb.classList.add('active'); document.body.style.overflow = 'hidden'; show(); }
+    function closeLightbox() { lb.classList.remove('active'); document.body.style.overflow = ''; }
+    function step(d) { idx = (idx + d + list.length) % list.length; show(); }
+    function openSingle(src, alt) { list = [{ src, alt }]; idx = 0; openLb(); }
+
+    gallery.addEventListener('click', e => {
+      const btn = e.target.closest('.gallery-item'); if (!btn) return;
+      const items = visibleItems();
+      list = items.map(b => ({ src: `images/foto_${pad(+b.dataset.n)}.jpg`, alt: b.getAttribute('aria-label') }));
+      idx = items.indexOf(btn); openLb();
+    });
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
     document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('active')) return;
       if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+    let tx = null;
+    lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', e => {
+      if (tx === null || list.length < 2) return;
+      const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null;
     });
 
-    // Smooth scroll
+    document.querySelectorAll('.filter').forEach(f => f.addEventListener('click', () => {
+      document.querySelectorAll('.filter').forEach(x => x.classList.toggle('active', x === f));
+      const c = f.dataset.f;
+      gallery.querySelectorAll('.gallery-item').forEach(it => it.classList.toggle('hidden', c !== 'all' && it.dataset.cat !== c));
+    }));
+
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
         e.preventDefault();
-        document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+        if (href === '#') window.scrollTo({ top: 0, behavior: 'smooth' });
+        else document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
         document.querySelector('nav')?.classList.remove('open');
       });
     });
