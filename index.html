@@ -16,12 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy: #1a365d;
-      --navy-dark: #0f2744;
-      --orange: #f6ad55;
-      --orange-dark: #dd9a3f;
+      --navy: #1f2933; --navy-dark: #111827; --orange: #b8813a; --orange-dark: #9a6a2c; --on-accent: #ffffff;
       --gray: #4a5568;
-      --light: #f7fafc;
+      --light: #f5f5f4;
       --line: #e2e8f0;
       --white: #ffffff;
     }
@@ -40,7 +37,7 @@
     /* Header */
     header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(26, 54, 93, 0.96);
+      background: rgba(17, 24, 39, 0.96);
       backdrop-filter: blur(10px);
       padding: 0.9rem 1.5rem;
       display: flex; align-items: center; justify-content: space-between;
@@ -55,7 +52,7 @@
 
     .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--orange); color: var(--navy);
+      background: var(--orange); color: var(--on-accent);
       font-weight: 700; font-size: 0.9rem;
       padding: 0.7rem 1.4rem; border-radius: 6px;
       transition: all 0.2s; border: 2px solid var(--orange); cursor: pointer;
@@ -63,7 +60,7 @@
     }
     .btn:hover { background: var(--orange-dark); border-color: var(--orange-dark); transform: translateY(-1px); }
     .btn-outline { background: transparent; color: var(--orange); }
-    .btn-outline:hover { background: var(--orange); color: var(--navy); }
+    .btn-outline:hover { background: var(--orange); color: var(--on-accent); }
     .btn-navy { background: var(--navy); border-color: var(--navy); color: var(--white); }
     .btn-navy:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
 
@@ -72,12 +69,12 @@
     .hero-bg { position: absolute; inset: 0; background: url('images/foto_01.jpg') center/cover no-repeat; transform: scale(1.05); }
     .hero-bg::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(15,39,68,0.9) 0%, rgba(26,54,93,0.72) 50%, rgba(15,39,68,0.86) 100%);
+      background: linear-gradient(135deg, rgba(17,24,39,0.9) 0%, rgba(31,41,51,0.72) 50%, rgba(17,24,39,0.88) 100%);
     }
     .hero-content { position: relative; z-index: 2; max-width: 1100px; width: 100%; margin: 0 auto; padding: 7rem 1.5rem 4rem; }
     .badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; }
     .badge {
-      display: inline-block; background: var(--orange); color: var(--navy);
+      display: inline-block; background: var(--orange); color: var(--on-accent);
       font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em;
       padding: 0.4rem 1rem; border-radius: 4px;
     }
@@ -93,7 +90,7 @@
     .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; }
 
     /* Budget banner */
-    .budget-banner { background: var(--orange); color: var(--navy); padding: 1.6rem 1.5rem; }
+    .budget-banner { background: var(--orange); color: var(--on-accent); padding: 1.6rem 1.5rem; }
     .budget-banner .container { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; justify-content: space-between; }
     .budget-banner .bb-text { display: flex; gap: 1rem; align-items: center; flex: 1 1 480px; }
     .budget-banner .bb-icon { font-size: 2rem; flex-shrink: 0; }
@@ -111,13 +108,13 @@
     /* Intro */
     .intro-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: start; }
     .intro-grid p { color: var(--gray); margin-bottom: 1rem; }
-    .intro-img { border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(26,54,93,0.15); }
+    .intro-img { border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(31,41,51,0.15); }
     @media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; gap: 2rem; } }
 
     /* Kenmerken */
     .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
     .feature-card { background: var(--light); border-radius: 12px; padding: 1.75rem; transition: transform 0.2s, box-shadow 0.2s; }
-    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(26,54,93,0.1); }
+    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(31,41,51,0.1); }
     .feature-card .icon {
       width: 48px; height: 48px; background: var(--navy); color: var(--orange);
       border-radius: 10px; display: flex; align-items: center; justify-content: center;
@@ -126,7 +123,7 @@
     .feature-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
     .feature-card p { color: var(--gray); font-size: 0.93rem; }
     .feature-card.highlight { background: var(--navy); color: var(--white); }
-    .feature-card.highlight .icon { background: var(--orange); color: var(--navy); }
+    .feature-card.highlight .icon { background: var(--orange); color: var(--on-accent); }
     .feature-card.highlight p { color: rgba(255,255,255,0.8); }
 
     /* Video */
@@ -181,7 +178,7 @@
     .cond.price h4 { color: var(--orange); }
     .cond.price p { color: rgba(255,255,255,0.8); }
     .cond.price .amount { display: block; font-size: 1.8rem; font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 0.25rem; }
-    .cond.budget { background: #fff7eb; border-color: var(--orange); }
+    .cond.budget { background: #faf5ee; border-color: var(--orange); }
 
     /* Locatie */
     .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
@@ -189,11 +186,11 @@
     .location-points { list-style: none; margin: 1.5rem 0; }
     .location-points li { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1rem; font-size: 1rem; }
     .location-points .check {
-      background: var(--orange); color: var(--navy); width: 26px; height: 26px; border-radius: 50%;
+      background: var(--orange); color: var(--on-accent); width: 26px; height: 26px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; font-size: 0.85rem;
     }
     .maps { display: grid; gap: 1rem; }
-    .maps img { border-radius: 12px; box-shadow: 0 15px 40px rgba(26,54,93,0.12); cursor: zoom-in; width: 100%; }
+    .maps img { border-radius: 12px; box-shadow: 0 15px 40px rgba(31,41,51,0.12); cursor: zoom-in; width: 100%; }
 
     /* Downloads */
     .downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
@@ -273,6 +270,7 @@
       <a href="#specificaties">Specificaties</a>
       <a href="#huurcondities">Huurcondities</a>
       <a href="#locatie">Locatie</a>
+      <a href="doelgroepen.html">Geschikt voor</a>
       <a href="#contact" class="btn" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Contact</a>
     </nav>
   </header>
@@ -367,6 +365,7 @@
           <p>Bestemmingsplan Het Ambacht staat bedrijvigheid toe tot en met milieucategorie 4.2.</p>
         </div>
       </div>
+      <p style="margin-top: 2rem;"><a href="doelgroepen.html" class="btn btn-navy">Voor welke bedrijven is dit pand geschikt? →</a></p>
     </div>
   </section>
 
@@ -571,6 +570,7 @@
   <footer>
     <p><strong>Inductorstraat 41, 3903 KA Veenendaal</strong> · Bedrijfsobject te huur · <a href="tel:+31633042600" style="color: var(--orange);">06-33042600</a></p>
     <div class="footer-links">
+      <a href="doelgroepen.html" class="btn">Voor welke bedrijven?</a>
       <a href="linkedin.html" class="btn btn-li">in&nbsp; LinkedIn promotie</a>
     </div>
     <p class="disclaimer">De vermelde informatie behelst geen aanbod, maar globale informatie van algemene aard en is niet meer dan een uitnodiging om in onderhandeling te treden. Aan de inhoud kunnen geen rechten worden ontleend. Metrages en tekeningen zijn indicatief.</p>
