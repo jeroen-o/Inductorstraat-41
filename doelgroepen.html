@@ -27,8 +27,16 @@
     .logo span { color: var(--orange); }
     .logo-pc { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.75); margin-left: 0.6rem; white-space: nowrap; }
     @media (max-width: 420px) { .logo-pc { display: block; margin-left: 0; font-size: 0.72rem; line-height: 1.2; } }
-    .back { color: rgba(255,255,255,0.85); font-size: 0.88rem; font-weight: 500; white-space: nowrap; }
-    .back:hover { color: var(--orange); }
+    nav { display: flex; gap: 1.5rem; align-items: center; }
+    nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--orange); }
+    nav a.btn, nav a.btn:hover { color: var(--on-accent); }
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 1.25rem 1.5rem; gap: 1rem; }
+    }
 
     .btn { display: inline-flex; align-items: center; gap: 0.45rem; background: var(--orange); color: var(--on-accent); font-family: inherit; font-weight: 700; font-size: 0.9rem; padding: 0.7rem 1.3rem; border-radius: 6px; border: 2px solid var(--orange); cursor: pointer; transition: all 0.2s; }
     .btn:hover { background: var(--orange-dark); border-color: var(--orange-dark); }
@@ -123,7 +131,17 @@
 
   <header>
     <a href="index.html" class="logo">Inductorstraat <span>41</span><small class="logo-pc">3903 KA Veenendaal</small></a>
-    <a href="index.html" class="back">← Terug naar het object</a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html#object">Het object</a>
+      <a href="index.html#video">Video</a>
+      <a href="index.html#galerij">Foto’s</a>
+      <a href="index.html#specificaties">Specificaties</a>
+      <a href="index.html#huurcondities">Huurcondities</a>
+      <a href="index.html#locatie">Locatie</a>
+      <a href="doelgroepen.html" class="active" aria-current="page">Geschikt voor</a>
+      <a href="index.html#contact" class="btn" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Contact</a>
+    </nav>
   </header>
 
   <div class="hero">
