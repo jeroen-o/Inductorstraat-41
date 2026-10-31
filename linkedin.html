@@ -91,6 +91,25 @@
     .tips li { display: flex; gap: 0.75rem; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem; font-size: 0.93rem; color: var(--gray); }
     .tips li::before { content: '✓'; background: var(--orange); color: var(--on-accent); font-weight: 800; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.8rem; }
 
+    .dg-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+    .dg-tab { background: var(--white); border: 1px solid var(--line); color: var(--navy); font-family: inherit; font-weight: 600; font-size: 0.85rem; padding: 0.5rem 1rem; border-radius: 999px; cursor: pointer; transition: all 0.2s; }
+    .dg-tab:hover { border-color: var(--navy); }
+    .dg-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .dg-panel { display: none; }
+    .dg-panel.active { display: block; }
+    .dg-top { display: grid; grid-template-columns: 340px 1fr; gap: 2rem; margin-bottom: 2rem; }
+    @media (max-width: 820px) { .dg-top { grid-template-columns: 1fr; gap: 1.25rem; } }
+    .dg-top img { border-radius: 10px; box-shadow: 0 10px 30px rgba(31,41,51,0.15); }
+    .prio { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; background: var(--navy); color: #fff; padding: 0.25rem 0.7rem; border-radius: 4px; margin-bottom: 0.6rem; }
+    .dg-top h3 { font-size: 1.5rem; font-weight: 800; line-height: 1.25; margin-bottom: 0.9rem; }
+    .kern { border-left: 4px solid var(--orange); background: var(--white); padding: 0.9rem 1.1rem; font-style: italic; color: var(--navy); margin-bottom: 1rem; border-radius: 0 8px 8px 0; }
+    .tgt { list-style: none; display: grid; gap: 0.35rem; }
+    .tgt li { font-size: 0.9rem; color: var(--gray); }
+    .tgt b { color: var(--navy); }
+    .dg-posts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 900px) { .dg-posts { grid-template-columns: 1fr; } }
+    .dg-posts h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .dg-tips { margin-top: 2.5rem; }
     .downloads { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
     footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-size: 0.88rem; }
@@ -127,6 +146,7 @@
         <a href="#doelgroep">Doelgroep</a>
         <a href="#kalender">Contentkalender</a>
         <a href="#posts">Posts &amp; designs</a>
+        <a href="#doelgroepen">Per doelgroep</a>
         <a href="#video">Video</a>
         <a href="#ads">LinkedIn Ads</a>
         <a href="#tips">Tips</a>
@@ -197,6 +217,31 @@
     </div>
   </section>
 
+  <!-- Campagnes per doelgroep -->
+  <section id="doelgroepen">
+    <div class="container">
+      <div class="label">Campagnes per doelgroep</div>
+      <h2>Zes gerichte campagnes</h2>
+      <p class="lead">Gebaseerd op de <a href="doelgroepen.html" style="color: var(--li); font-weight: 600;">doelgroepenanalyse</a>. Per doelgroep: targeting-advies, kernboodschap, een eigen design en twee kant-en-klare posts.</p>
+      <div class="dg-tabs" id="dg-tabs" role="tablist"></div>
+      <div id="dg-panels"></div>
+      <div class="dg-tips">
+        <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.9rem;">Praktische tips voor alle doelgroep-campagnes</h3>
+        <ul class="tips">
+          <li>Begin met de video + post 1 van de meest relevante doelgroep.</li>
+          <li>Gebruik het doelgroep-design, of de algemene designs (post 1 t/m 6).</li>
+          <li>Target op LinkedIn op functietitel + branche + regio + bedrijfsgrootte.</li>
+          <li>Test 2–3 teksten per doelgroep en kijk welke de meeste reacties en leads oplevert.</li>
+          <li>Herhaal de best presterende post na 10–14 dagen met licht aangepaste tekst.</li>
+        </ul>
+      </div>
+      <div class="downloads" style="margin-top: 2rem;">
+        <a class="btn btn-li" href="docs/LinkedIn_Campagnes_per_Doelgroep_Inductorstraat41.docx" download><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Campagnes per doelgroep (Word)</a>
+        <button class="btn" id="dl-dg"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Alle 6 doelgroep-designs</button>
+      </div>
+    </div>
+  </section>
+
   <!-- Video -->
   <section id="video">
     <div class="container">
@@ -259,7 +304,8 @@
       <h2>Alle bestanden</h2>
       <div class="downloads">
         <a class="btn btn-li" href="docs/LinkedIn_Campagne_Inductorstraat_41_Veenendaal.docx" download><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Campagneplan (Word)</a>
-        <button class="btn" id="dl-all"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Alle 7 designs</button>
+        <button class="btn" id="dl-all"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Alle 7 algemene designs</button>
+        <a class="btn btn-ghost" href="docs/LinkedIn_Campagnes_per_Doelgroep_Inductorstraat41.docx" download><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Campagnes per doelgroep (Word)</a>
         <a class="btn btn-ghost" href="video/promo.mp4" download="Inductorstraat_41_Veenendaal_promotievideo.mp4"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Video (MP4)</a>
         <a class="btn btn-ghost" href="docs/brochure-inductorstraat-41.pdf" target="_blank" rel="noopener"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Brochure (PDF)</a>
         <button class="btn btn-ghost" id="copy-url"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Kopieer websitelink</button>
@@ -426,6 +472,222 @@ Eric: 06-33042600
     document.getElementById('dl-all').addEventListener('click', () => {
       [...new Set(POSTS.map(p => p.img))].forEach((img, i) => setTimeout(() => {
         const a = document.createElement('a'); a.href = `images/${img}.jpg`; a.download = `${img}.jpg`; document.body.appendChild(a); a.click(); a.remove();
+      }, i * 400));
+    });
+
+    // ---- Campagnes per doelgroep ----
+    const DG = [
+      { key: 'metaal', tab: 'Metaal & machinebouw', title: 'Metaalbewerking, staalbouw & machinebouw', prio: 'Beste match – hoogste prioriteit',
+        tgt: { Functies: 'Directeuren, eigenaren, productiemanagers, technische directeuren', Branches: 'Metaalproductie, staalconstructie, machinebouw, plaatbewerking, lasbedrijven, constructiewerkplaatsen', Regio: 'Utrecht, Gelderland, Flevoland, Noord-Brabant (primair)', Bedrijfsgrootte: '15–250 medewerkers' },
+        kern: 'Een hal die al is gebouwd voor zwaar metaalwerk: kraanbanen, krachtstroom, milieucategorie 4.2 en hoge deuren. Direct productie-klaar.',
+        posts: [
+          { t: 'Post 1 – Aankondiging (video + teaser)', v: 'post1_teaser.jpg of de video', text: `Op zoek naar een echte werkplaats voor staal, plaat of machines?
+
+Inductorstraat 41 in Veenendaal is gebouwd voor dit werk:
+• Kraanbanen aanwezig
+• Milieucategorie 4.2
+• 183 kW krachtstroom + perslucht
+• 10 schuifdeuren van ca. 6 meter
+• 5.380 m² hal + 1.390 m² kantoor
+
+Geen dure ombouw, maar een pand dat al past bij metaalbewerking en machinebouw.
+
+Bekijk de video of plan een rondleiding met Eric: 06-33042600
+
+#metaalbewerking #staalbouw #machinebouw #bedrijfspand #veenendaal #kraanbaan #tehuur` },
+          { t: 'Post 2 – Dieper op de match', v: 'doelgroep_metaal.jpg of post2_kengetallen.jpg', text: `Waarom dit pand zo goed past bij metaal- en machinebouw:
+
+✓ Kraanbanen voor zware werkstukken
+✓ Milieucategorie 4.2 → lassen en geluid toegestaan
+✓ Beuken van 15 m → zagen, lassen, montage en expeditie gescheiden
+✓ Kleedruimtes + kantine voor werkplaatspersoneel
+✓ Kantoor voor engineering en calculatie onder één dak
+
+Budget beschikbaar voor aanpassingen.
+
+Eric: 06-33042600
+
+#staalconstructie #plaatbewerking #lasbedrijf #machinebouw #veenendaal` },
+        ] },
+      { key: 'maakindustrie', tab: 'Maakindustrie', title: 'Maakindustrie & assemblage', prio: 'Zeer geschikt',
+        tgt: { Functies: 'Directeuren, operations managers, plant managers', Branches: 'Kunststofverwerking, hout/meubel, interieur & standbouw, elektrotechnische assemblage, verpakkingsproductie, toeleveranciers', Regio: 'Foodvalley + Midden-Nederland' },
+        kern: 'Productie, opslag én engineering-kantoor op één locatie. Flexibele vloer en budget om het pand aan uw proces aan te passen.',
+        posts: [
+          { t: 'Post 1', v: 'doelgroep_maakindustrie.jpg, post_extra_highlight.jpg of foto_07', text: `Groeien of samenvoegen? Dit pand is gemaakt voor maakindustrie.
+
+Inductorstraat 41, Veenendaal:
+• 5.380 m² flexibele productieruimte
+• Lichtstraten voor daglicht op de werkvloer
+• 1.390 m² kantoor voor R&D, werkvoorbereiding en sales
+• Budget om het pand aan uw productielijnen aan te passen
+
+Van kunststof en hout tot assemblage en verpakking: hier past het.
+
+Plan een rondleiding: Eric 06-33042600
+
+#maakindustrie #assemblage #productie #bedrijfspand #veenendaal #tehuur` },
+          { t: 'Post 2', v: 'Combinatie kantoor + hal', text: `Eén locatie voor productie én kantoor.
+
+Veel maakbedrijven zitten verspreid. Hier brengt u productielijnen, grondstoffenopslag, eindproduct én het engineeringsteam onder één dak.
+
+5 beuken van 15 meter breed, 7,5 m hoog. Aanpasbaar met het beschikbare budget.
+
+Interesse? Eric: 06-33042600
+
+#productiebedrijf #assemblage #engineering #veenendaal` },
+        ] },
+      { key: 'bouw', tab: 'Bouw & installatie', title: 'Bouw, installatie & infra', prio: 'Zeer geschikt',
+        tgt: { Functies: 'Directeuren, uitvoerders, facility- / materieelmanagers', Branches: 'Utiliteitsaannemers, installatiebedrijven (E/W), dak- & gevelbouw, prefab, infra, materieelverhuur', Regio: 'Utrecht, Gelderland, regio Amersfoort–Arnhem' },
+        kern: 'Centrale uitvalsbasis met werkplaats, magazijn, kleedruimtes en kantoor. Hoge deuren voor materieel, snel de regio in via A12/A15.',
+        posts: [
+          { t: 'Post 1', v: 'doelgroep_bouw.jpg, post3_locatie.jpg of foto_10 (deuren)', text: `Aannemers en installateurs opgelet.
+
+Inductorstraat 41 in Veenendaal is een sterke centrale uitvalsbasis:
+• Hoge schuifdeuren (ca. 6 m) voor materieel en voertuigen
+• Werkplaats + magazijn + prefab-ruimte
+• Kleedruimtes en kantine voor monteurs
+• Parkeren op eigen terrein
+• Direct aan de Rondweg-Oost → snel de A12 en A15 op
+
+Ideaal voor utiliteitsbouw, installatie, dak/gevel of infra.
+
+Eric: 06-33042600
+
+#aannemer #installatiebedrijf #bouw #infra #bedrijfspand #veenendaal` },
+          { t: 'Post 2', v: 'post5_cta.jpg', text: `Monteurs, materieel en kantoor op één plek.
+
+Geen versnippering meer over meerdere locaties. Dit object biedt ruimte voor werkplaats, opslag van materialen, stalling van bussen én een volwaardig kantoor.
+
+Snel de regio in. Vrijblijvende rondleiding mogelijk.
+
+06-33042600 – Eric
+
+#bouwbedrijf #installatie #prefab #veenendaal #tehuur` },
+        ] },
+      { key: 'groothandel', tab: 'Groothandel', title: 'Technische groothandel & distributie', prio: 'Geschikt',
+        tgt: { Functies: 'Directeuren, logistiek managers, supply chain', Branches: 'Technische groothandel, bouwmaterialen, staal- & profielenhandel, machineonderdelen, e-commerce zware goederen' },
+        kern: 'Opslag van zware of grote producten + orderverwerking + balie/kantoor. Kraanbanen en veel deuren voor laden/lossen.',
+        posts: [
+          { t: 'Post 1', v: 'doelgroep_groothandel.jpg of post2_kengetallen.jpg', text: `Technische groothandel of zware distributie?
+
+Inductorstraat 41 biedt:
+• Kraanbanen voor staal, profielen en machines
+• 10 schuifdeuren voor efficiënt laden en lossen
+• Ruim kantoor voor binnendienst en klantenservice
+• Centrale ligging in Midden-Nederland (A12/A15)
+
+Geen standaard warehouse, maar een pand dat zware en omvangrijke goederen aankan.
+
+Eric: 06-33042600
+
+#groothandel #technischegroothandel #distributie #staalhandel #veenendaal` },
+          { t: 'Post 2', v: 'foto_10 of post3_locatie.jpg', text: `Laden, lossen en kantoor onder één dak.
+
+Voor groothandels met zware of grote artikelen is de combinatie van kraan, hoge deuren en een serieus kantoor zeldzaam. Hier is die combinatie er al.
+
+Plan een bezichtiging: 06-33042600
+
+#distributie #groothandel #logistiek #veenendaal` },
+        ] },
+      { key: 'foodvalley', tab: 'Food- & agritech', title: 'Food-, agri- & procestechniek', prio: 'Geschikt – sterke regionale match (Foodvalley)',
+        tgt: { Functies: 'Directeuren, R&D-managers, operations', Branches: 'Voedingsmiddelenmachines, verpakkingsmachines, agri-tech, kas-/stalinrichting, RVS-verwerking, procesinstallaties, scale-ups', Regio: 'Foodvalley (Wageningen e.o.), Utrecht, Gelderland' },
+        kern: 'Midden in de Foodvalley. Werkplaats met kraan voor grote installaties + ruim kantoor voor engineering en testteams.',
+        posts: [
+          { t: 'Post 1', v: 'doelgroep_foodvalley.jpg, post1_teaser.jpg of post3_locatie.jpg', text: `Foodvalley-bedrijven: dit pand ligt midden in jullie ecosysteem.
+
+Inductorstraat 41, Veenendaal:
+• Werkplaats met kraanbanen voor grote machines en installaties
+• Ruim kantoor voor engineering, R&D en testteams
+• Krachtstroom en perslucht aanwezig
+• Snel naar Wageningen, Utrecht en de rest van de Foodvalley
+
+Ideaal voor machinebouwers, agri-tech en procesinstallaties.
+
+Eric: 06-33042600
+
+#foodvalley #agritech #machinebouw #voedingsmiddelenindustrie #veenendaal #procestechniek` },
+          { t: 'Post 2', v: 'Combinatie kantoor + hal', text: `Van pilot naar productie – of gewoon meer ruimte voor engineering en assemblage.
+
+Dit object combineert een serieuze werkplaats met een volwaardig kantoor. Perfect voor bedrijven die machines of installaties bouwen voor de food- en agri-sector.
+
+Rondleiding plannen? 06-33042600
+
+#foodtech #agritech #engineering #veenendaal` },
+        ] },
+      { key: 'hq', tab: 'Hoofdkantoor + productie', title: 'Hoofdkantoor met eigen productie', prio: 'Geschikt',
+        tgt: { Functies: 'Directie, facility managers, operations directors', Branches: 'Technische dienstverleners, onderhoud & service, energie/laadinfra, systeemintegratoren, bedrijven met eigen testhal of trainingscentrum' },
+        kern: 'Alles onder één dak: representatief hoofdkantoor + eigen werkplaats, service-afdeling of R&D-hal. Geen versnippering meer.',
+        posts: [
+          { t: 'Post 1', v: 'doelgroep_hq.jpg, post4_kantoor.jpg + post1_teaser.jpg', text: `Verspreid over meerdere locaties? Breng alles samen.
+
+Inductorstraat 41 biedt:
+• Representatieve entree en kantoorruimte (1.390 m²)
+• Eigen werkplaats / servicehal / testhal (5.380 m²)
+• Kantine en kleedruimtes
+• Direct aan de Rondweg-Oost
+
+Ideaal voor technische dienstverleners, servicebedrijven en bedrijven met een eigen productie- of testafdeling.
+
+Eric: 06-33042600
+
+#hoofdkantoor #technischedienstverlening #servicebedrijf #veenendaal #bedrijfspand` },
+          { t: 'Post 2', v: 'post5_cta.jpg', text: `Hoofdkantoor én productie op één adres.
+
+Geen aparte werkplaats meer aan de andere kant van de stad. Hier zitten directie, engineering, verkoop én de werkplaats onder één dak.
+
+Vrijblijvende rondleiding: 06-33042600
+
+#hoofdkantoor #productie #veenendaal #tehuur` },
+        ] },
+    ];
+
+    const DLI = `<svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>`;
+    document.getElementById('dg-tabs').innerHTML = DG.map((d, i) =>
+      `<button class="dg-tab${i ? '' : ' active'}" role="tab" data-dg="${d.key}">${esc(d.tab)}</button>`).join('');
+    document.getElementById('dg-panels').innerHTML = DG.map((d, i) => `
+      <div class="dg-panel${i ? '' : ' active'}" id="dg-${d.key}" role="tabpanel">
+        <div class="dg-top">
+          <div>
+            <img src="images/doelgroep_${d.key}.jpg" alt="Design doelgroep ${esc(d.title)}" loading="lazy" />
+            <div class="post-actions"><a class="btn btn-ghost" href="images/doelgroep_${d.key}.jpg" download="doelgroep_${d.key}.jpg">${DLI} Design (1200×1200)</a></div>
+          </div>
+          <div>
+            <span class="prio">${esc(d.prio)}</span>
+            <h3>${esc(d.title)}</h3>
+            <div class="kern">“${esc(d.kern)}”</div>
+            <h4 style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--orange-dark); margin-bottom: 0.4rem;">Targeting</h4>
+            <ul class="tgt">${Object.entries(d.tgt).map(([k, v]) => `<li><b>${k}:</b> ${esc(v)}</li>`).join('')}</ul>
+          </div>
+        </div>
+        <div class="dg-posts">
+          ${d.posts.map((p, j) => `
+            <div>
+              <h4>${esc(p.t)}</h4>
+              <p class="post-meta"><strong>Visueel:</strong> ${esc(p.v)}</p>
+              <div class="post-text">${fmt(p.text)}</div>
+              <div class="post-actions">
+                <button class="btn" data-dgcopy="${i}-${j}">${COPY_HTML}</button>
+                <a class="btn btn-li" href="https://www.linkedin.com/feed/?shareActive=true" target="_blank" rel="noopener">Open LinkedIn</a>
+                <span class="chars">${p.text.length.toLocaleString('nl-NL')} tekens</span>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>`).join('');
+
+    document.getElementById('dg-tabs').addEventListener('click', e => {
+      const t = e.target.closest('.dg-tab'); if (!t) return;
+      document.querySelectorAll('.dg-tab').forEach(x => x.classList.toggle('active', x === t));
+      document.querySelectorAll('.dg-panel').forEach(x => x.classList.toggle('active', x.id === 'dg-' + t.dataset.dg));
+    });
+    document.getElementById('dg-panels').addEventListener('click', async e => {
+      const b = e.target.closest('[data-dgcopy]'); if (!b) return;
+      const [i, j] = b.dataset.dgcopy.split('-').map(Number);
+      if (await copy(DG[i].posts[j].text)) { b.classList.add('done'); b.innerHTML = '✓ Gekopieerd'; notify('Posttekst gekopieerd'); setTimeout(() => { b.classList.remove('done'); b.innerHTML = COPY_HTML; }, 2000); }
+      else notify('Kopiëren mislukt – selecteer de tekst handmatig');
+    });
+    document.getElementById('dl-dg').addEventListener('click', () => {
+      DG.forEach((d, i) => setTimeout(() => {
+        const a = document.createElement('a'); a.href = `images/doelgroep_${d.key}.jpg`; a.download = `doelgroep_${d.key}.jpg`; document.body.appendChild(a); a.click(); a.remove();
       }, i * 400));
     });
   </script>
