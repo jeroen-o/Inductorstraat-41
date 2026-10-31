@@ -11,6 +11,11 @@
   <meta property="og:image" content="https://jeroen-o.github.io/Inductorstraat-41/images/post1_teaser.jpg" />
   <meta property="og:url" content="https://jeroen-o.github.io/Inductorstraat-41/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" hreflang="nl" href="https://jeroen-o.github.io/Inductorstraat-41/index.html" />
+  <link rel="alternate" hreflang="en" href="https://jeroen-o.github.io/Inductorstraat-41/en/index.html" />
+  <link rel="alternate" hreflang="de" href="https://jeroen-o.github.io/Inductorstraat-41/de/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://jeroen-o.github.io/Inductorstraat-41/fr/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://jeroen-o.github.io/Inductorstraat-41/index.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -42,12 +47,12 @@
       padding: 0.9rem 1.5rem;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .logo { font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: -0.02em; }
+    .logo { font-weight: 700; font-size: 1.15rem; color: var(--white); letter-spacing: -0.02em; white-space: nowrap; }
     .logo span { color: var(--orange); }
     .logo-pc { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.75); margin-left: 0.6rem; letter-spacing: 0; white-space: nowrap; }
     @media (max-width: 420px) { .logo-pc { display: block; margin-left: 0; font-size: 0.72rem; line-height: 1.2; } }
     nav { display: flex; gap: 1.5rem; align-items: center; }
-    nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    nav a { color: rgba(255,255,255,0.9); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
     nav a:hover { color: var(--orange); }
 
     .ico { flex-shrink: 0; }
@@ -229,8 +234,18 @@
     .lb-count { position: absolute; bottom: 1rem; left: 0; right: 0; text-align: center; color: rgba(255,255,255,0.75); font-size: 0.85rem; }
 
     /* Mobile nav */
+    .lang { display: flex; gap: 0.1rem; margin-left: 1.25rem; flex-shrink: 0; }
+    .lang a { color: rgba(255,255,255,0.7); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.45rem; border-radius: 4px; letter-spacing: 0.04em; }
+    .lang a:hover { color: var(--orange); }
+    .lang a.on { color: #fff; background: rgba(255,255,255,0.14); }
+    nav { margin-left: auto; }
+    @media (max-width: 1200px) {
+      .lang { margin-left: auto; margin-right: 0.5rem; order: 2; }
+      .menu-toggle { order: 3; }
+    }
+    @media (max-width: 420px) { .lang a { padding: 0.25rem 0.3rem; font-size: 0.7rem; } }
     .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; }
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
       nav { display: none; }
       .menu-toggle { display: block; }
       nav.open { display: flex; flex-direction: column; align-items: flex-start; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 1.25rem 1.5rem; gap: 1rem; }
@@ -274,6 +289,12 @@
       <a href="doelgroepen.html">Geschikt voor</a>
       <a href="#contact" class="btn" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Contact</a>
     </nav>
+    <div class="lang" aria-label="Taal / Language">
+      <a href="index.html" class="on" hreflang="nl" lang="nl" aria-current="true">NL</a>
+      <a href="en/index.html" hreflang="en" lang="en">EN</a>
+      <a href="de/index.html" hreflang="de" lang="de">DE</a>
+      <a href="fr/index.html" hreflang="fr" lang="fr">FR</a>
+    </div>
   </header>
 
   <!-- Hero -->
